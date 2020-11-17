@@ -1,0 +1,8 @@
+[2020-10-16 10:52:27.976508] >> Transacción fallida, ingresó información incorrecta 
+[2020-10-16 10:52:29.759427] >> Transacción fallida, ingresó información incorrecta 
+[2020-10-16 10:52:41.234765] >> Realizó consulta del balance total, se generó el archivo /home/jamesgiraldo/Descargas/delegate/info_balance_total.txt 
+[2020-10-16 10:53:35.122428] >> Transacción fallida, ingresó información incorrecta 
+[2020-10-16 10:55:23.473223] >> Moneda:Bitcoin (s): Envió a A0, cantidad:10.0 Bitcoin(s) equivalente a 113242.79 USD 
+[2020-10-16 10:55:34.716518] >> Moneda:Bitcoin (s): Recibió de A0, cantidad:10.0 Bitcoin(s) equivalente a 113242.79 USD 
+[2020-10-16 10:55:40.353365] >> Realizó consulta del balance actual de la moneda Bitcoin 
+[2020-10-16 10:55:51.613873] >> Realizó consulta del balance actual de la moneda Bitcoin 

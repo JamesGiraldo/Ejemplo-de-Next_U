@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/jquery.timepicker.min.css"/>
+      <link type="text/css" rel="stylesheet" href="css/new_viaje.css"  media="screen,projection"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Bienvevido</title>
+    </head>
+
+    <body>
+
+      <div class="container">
+        <div class="row primera">
+          <div class="col s12">
+            <h1 class="center-align">Progama un nuevo viaje </h1>
+          </div>
+        </div>
+        <form id="new_viaje">
+          <div class="row">
+            <div class="input-field col s5">
+              <select id="ciudad_origen" class="selector">
+                <option value="" disabled selected>Seleccione una ciudad</option>
+              </select>
+              <label>Ciudad Origen</label>
+            </div>
+            <div class="input-field col s5 offset-s2">
+              <select id="vehiculo" class="selector">
+              </select>
+              <label>Vehículo</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s5">
+              <select id="ciudad_destino" class="selector2">
+              </select>
+              <label>Ciudad Destino</label>
+            </div>
+            <div class="input-field col s5 offset-s2">
+              <select id="conductor" class="selector">
+              </select>
+              <label>Conductor</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s5">
+              <label>Fecha de partida</label>
+              <input type="date" class="datepicker" id="fecha_salida">
+            </div>
+            <div class="input-field col s5 offset-s2">
+              <label>Hora de partida</label>
+              <input type="text" class="timepicker" id="hora_salida">
+            </div>
+          </div>
+          <div class="row br">
+            <button type="submit" class="btn waves-effect brown" id="enviar">Enviar <i class="material-icons left">send</i></button>
+          </div>
+        </form>
+
+
+      </div>
+
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large brown" id="logout">
+          <i class="large material-icons">launch</i>
+        </a>
+      </div>
+
+
+
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/jquery.timepicker.min.js"></script>
+      <script type="text/javascript" src="js/new_viaje.js"></script>
+    </body>
+  </html>

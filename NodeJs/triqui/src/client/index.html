@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css" media="screen" title="no title">
+
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="main-left">
+      <div class="titulo-container">
+        <h1>TIC TAC TOE</h1>
+      </div>
+      <div class="board-container">
+        <div class="cuadro" data-number="1"></div>
+        <div class="cuadro" data-number="2"></div>
+        <div class="cuadro" data-number="3"></div>
+        <div class="cuadro" data-number="4"></div>
+        <div class="cuadro" data-number="5"></div>
+        <div class="cuadro" data-number="6"></div>
+        <div class="cuadro" data-number="7"></div>
+        <div class="cuadro" data-number="8"></div>
+        <div class="cuadro" data-number="9"></div>
+      </div>
+      <div class="turnos-container">
+        <div class="turno mi-turno">Tu turno</div>
+        <div class="turno turno-oponente">Turno del oponente</div>
+      </div>
+    </div>
+
+    <div class="main-right">
+      <div class="score-container">
+        <h4>Score</h4>
+        <div class="score-content">
+          <div class="names-container">
+            <span class="player-names" id="myUser">Tu</span>
+            <span class="player-names" id="opUser">Oponente</span>
+          </div>
+          <div class="score-bar">
+            <div class="half-bar">
+              <div class="p1"></div>
+            </div>
+            <div class="half-bar">
+              <div class="p2"></div>
+            </div>
+          </div>
+          <div class="score-numbers">
+            <span class="number-p1">0</span>
+            <span class="number-p2">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="chat-container">
+        <h4>Chat</h4>
+        <div class="scroll-container">
+          <div class="msg-container">
+
+          </div>
+        </div>
+        <div class="input-container">
+          <textarea name="input-msg"></textarea>
+          <button type="button" name="send"><i class="material-icons">send</i></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal">
+      <div class="titulo-modal">
+        <h3>Bienvenido</h3>
+        <p>
+          Ingresa tu nombre de usuario!
+        </p>
+      </div>
+      <div class="new-user-form">
+        <input type="text" name="username">
+        <button type="button" name="new-usr-btn" id="newUser"><i class="material-icons">done</i></button>
+      </div>
+    </div>
+
+
+    <div id="info-partida">
+      <h2>¡Ganaste esta partida!</h2>
+      <button type="button" name="button" id="next-game"><i class="material-icons">trending_flat</i></button>
+    </div>
+
+
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

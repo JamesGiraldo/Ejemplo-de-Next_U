@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<label for="paises">Ultímo país visitado</label>
+	<select name="paises" id="listaPaises">
+	<option value="">Seleccione</option>
+	<option value="1">México</option>
+	<option value="2">Colombia</option>
+	<option value="3">Brasil</option>
+	</select>
+
+	<input type="submit" value="Visitar" onclick="guardarPais()">
+
+	<div id="ultimoPaisVisitado">El ultimo país visitado es: </div>
+	<script type="text/javascript">
+		function guardarPais() {
+			var pais = document.getElementById('listaPaises').value
+			localStorage.setItem('ultimo', pais); // para guardar
+			mostrarPaís()
+		}
+
+		function mostrarPaís() {
+			var paisObt = localStorage.getItem('ultimo')
+			document.getElementById("ultimoPaisVisitado").innerHTML = paisObt
+		}
+	</script>
+</body>
+</html>

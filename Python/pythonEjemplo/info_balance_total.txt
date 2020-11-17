@@ -1,0 +1,101 @@
+Nombre, Total 
+>>> Bitcoin : 0
+>>> Ethereum : 0
+>>> Tether : 0
+>>> XRP : 0
+>>> Bitcoin Cash : 0
+>>> Binance Coin : 0
+>>> Chainlink : 0
+>>> Polkadot : 0
+>>> Cardano : 0
+>>> Litecoin : 0
+>>> Bitcoin SV : 0
+>>> Crypto.com Coin : 0
+>>> USD Coin : 0
+>>> EOS : 0
+>>> Monero : 0
+>>> TRON : 0
+>>> Tezos : 0
+>>> Stellar : 0
+>>> Wrapped Bitcoin : 0
+>>> Neo : 0
+>>> UNUS SED LEO : 0
+>>> Cosmos : 0
+>>> NEM : 0
+>>> Dai : 0
+>>> Huobi Token : 0
+>>> Binance USD : 0
+>>> Filecoin : 0
+>>> IOTA : 0
+>>> THETA : 0
+>>> VeChain : 0
+>>> Zcash : 0
+>>> Dash : 0
+>>> Ethereum Classic : 0
+>>> Uniswap : 0
+>>> Maker : 0
+>>> OMG Network : 0
+>>> UMA : 0
+>>> Ontology : 0
+>>> yearn.finance : 0
+>>> Synthetix Network Token : 0
+>>> Aave : 0
+>>> ABBC Coin : 0
+>>> Compound : 0
+>>> TrueUSD : 0
+>>> FTX Token : 0
+>>> BitTorrent : 0
+>>> Dogecoin : 0
+>>> DigiByte : 0
+>>> Algorand : 0
+>>> OKB : 0
+>>> Basic Attention Token : 0
+>>> Waves : 0
+>>> Celsius : 0
+>>> HedgeTrade : 0
+>>> Ren : 0
+>>> 0x : 0
+>>> Celo : 0
+>>> Paxos Standard : 0
+>>> Kusama : 0
+>>> ICON : 0
+>>> Qtum : 0
+>>> Loopring : 0
+>>> Energy Web Token : 0
+>>> Zilliqa : 0
+>>> Hedera Hashgraph : 0
+>>> Kyber Network : 0
+>>> NXM : 0
+>>> NEAR Protocol : 0
+>>> Decred : 0
+>>> Augur : 0
+>>> HUSD : 0
+>>> Lisk : 0
+>>> Bitcoin Gold : 0
+>>> Ocean Protocol : 0
+>>> Band Protocol : 0
+>>> Quant : 0
+>>> Siacoin : 0
+>>> Terra : 0
+>>> CyberVein : 0
+>>> Enjin Coin : 0
+>>> Revain : 0
+>>> ZB Token : 0
+>>> The Midas Touch Gold : 0
+>>> Blockstack : 0
+>>> Arweave : 0
+>>> Aragon : 0
+>>> Decentraland : 0
+>>> Nano : 0
+>>> Elrond : 0
+>>> Avalanche : 0
+>>> Bitcoin Diamond : 0
+>>> Reserve Rights : 0
+>>> Solana : 0
+>>> Numeraire : 0
+>>> Ravencoin : 0
+>>> Nervos Network : 0
+>>> Balancer : 0
+>>> Swipe : 0
+>>> Golem : 0
+Su balance total en dólares es de 0.0 USD

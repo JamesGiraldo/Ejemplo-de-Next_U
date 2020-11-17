@@ -1,0 +1,16 @@
+@import "customColors.css";
+
+
+h3{
+  color: #9C550E;
+}
+div.primera
+{
+  margin-top: 10rem;
+}
+a{
+  color: #9C550E;
+}
+a:hover{
+  color: #ed8824;
+}

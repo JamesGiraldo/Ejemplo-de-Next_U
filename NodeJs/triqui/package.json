@@ -1,0 +1,40 @@
+{
+  "name": "tictactoe",
+  "version": "0.1.0",
+  "description": "c6u4 nextu web",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node dist/src/server",
+    "public": "if not exist \"public\" mkdir -p public && cp -r src/client/css public/ && cp src/client/index.html public/",
+    "build-js": "browserify src/client/js/index.js -o public/app.js -t [ babelify --presets [ es2015 ] ]",
+    "build": "npm run compile-server && npm run public && npm run build-js",
+    "compile-server": "babel src/server/index.js src/server/**/*.js --out-dir dist --presets es2015",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juank45944/TicTacToe.git"
+  },
+  "keywords": [
+    "nice"
+  ],
+  "author": "Integ.ro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juank45944/TicTacToe/issues"
+  },
+  "homepage": "https://github.com/Juank45944/TicTacToe#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babelify": "^7.3.0",
+    "bootstrap": "^4.5.3",
+    "browserify": "^13.1.0",
+    "express": "^4.14.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "socket.io": "^1.5.0",
+    "socket.io-client": "^1.5.0",
+    "watchify": "^3.7.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,8 @@
+BTC 5.0
+ETH 4.0
+LTH 2.0
+JAG 100.0
+GHJ 10.0
+abc 7.0
+
+AJO 100.0ttt 80.0

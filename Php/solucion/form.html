@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/form.css"  media="screen,projection"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Formulario</title>
+    </head>
+
+    <body>
+      <div class="container">
+
+        <!-- Título del Formulario -->
+        <div class="row primera">
+          <div class="col s12">
+            <h1>Formulario de ingreso</h1>
+          </div>
+        </div>
+        <!-- ..................... -->
+
+        <!-- Inicio del formulario -->
+        <div class="row segunda">
+          <form id="formulario">
+          <div class="col s12">
+            <div class="row">
+              <!-- Nombre -->
+              <div class="input-field col s6">
+                <i class="material-icons prefix">perm_identity</i>
+                <input id="nombre" type="text" name="nombre_usuario" required="required">
+                <label for="nombre" data-success="Correcto">Nombre y apellidos</label>
+              </div>
+              <!-- ................................. -->
+
+              <!-- Fecha de Nacimiento -->
+              <div class="input-field col s6">
+                <p>
+                  <label for="fechaNacimiento">fecha de Nacimiento</label>
+                </p>
+                <input type="date" class="datepicker" id="fechaNacimiento" name="fecha_nacimiento" required="required">
+              </div>
+              <!-- ................................. -->
+            </div>
+            <div class="row">
+              <!-- Contraseña -->
+              <div class="input-field col s6">
+                <i class="material-icons prefix">vpn_key</i>
+                <input id="contrasena" type="password" name="contrasena" required="required">
+                <label for="contrasena">Contraseña</label>
+              </div>
+              <!-- ................................. -->
+
+              <!-- Sexo -->
+              <div class="col s1">
+                <label class="desc">Sexo: </label>
+              </div>
+              <div class="input-field col s4">
+                  <input id="masculino" name="sexo" type="radio" class="with-gap" value="masculino">
+                  <label for="masculino">Masculino</label>
+                  <br>
+                  <input id="femenino" name="sexo" type="radio" class="with-gap" value="femenino">
+                  <label for="femenino" >Femenino</label>
+              </div>
+              <!-- ................................. -->
+            </div>
+            <div class="row">
+              <!-- Contraseña Repetida -->
+              <div class="input-field col s6">
+                <i class="material-icons prefix">vpn_key</i>
+                <input id="contrasenaRepetida" type="password" name="contrasena_repetida" required="required">
+                <label for="contrasenaRepetida">Escribe de nuevo la contraseña</label>
+              </div>
+              <!-- ................................. -->
+
+              <!-- Tipo de Vehiculo (checkbox) -->
+              <div class="col s6">
+                <p>Seleccione el tipo de vehículo que puede conducir</p>
+                <input type="checkbox" id="check1" name="automovil"/>
+                <label for="check1">Autmovil</label>
+                <input type="checkbox" id="check2" name="bus"/>
+                <label for="check2">Bus</label>
+              </div>
+              <!-- ................................. -->
+            </div>
+            <div class="row">
+              <!-- Email -->
+              <div class="input-field col s6">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" name="email_usuario" required="required">
+                <label for="email">Email</label>
+              </div>
+              <!-- ................................. -->
+
+              <div class="col s6">
+                <!-- Trabajo fuera de la ciudad (switch) -->
+                <p>
+                  <span>¿Puedes trabajar fuera de la ciudad?</span>
+                </p>
+                <div class="switch">
+                  <label>
+                    No
+                    <input type="checkbox" name="fueraCiudad" id="fueraCiudad">
+                    <span class="lever"></span>
+                    Si
+                  </label>
+                </div>
+                <!-- ................................. -->
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Experiencia (selected) -->
+              <div class="col s6">
+                <label class="select-label">Experiencia</label><br>
+                <select id="experiencia">
+                  <option value="" disabled selected>Elige tu experiencia</option>
+                  <option value="Menos de 1 anio">Menos de 1 año</option>
+                  <option value="Entre 1 y 5 anios">Entre 1 y 5 años</option>
+                  <option value="Entre 5 y 10 anios">Entre 5 y 10 años</option>
+                  <option value="Mas de 10 anios">Mas de 10 años</option>
+                </select>
+
+              </div>
+              <!-- ................................. -->
+            </div>
+
+            <div class="row">
+              <!-- Botón Submit -->
+              <div class="col s12 center-align">
+                <input type="submit" name="submit" value="Enviar" class="btn">
+              </div>
+              <!-- ................................. -->
+            </div>
+
+          </div>
+        </form>
+        </div>
+        <!-- Fin del Formulario -->
+      </div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/form.js"></script>
+    </body>
+  </html>

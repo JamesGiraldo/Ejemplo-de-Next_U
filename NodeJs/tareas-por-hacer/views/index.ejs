@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+      a:hover{
+        color: green;
+      }
+      ul li{
+        color: black;
+      }
+      ul li a , a:link{
+        color: black;
+        text-decoration: none;
+      }
+      ul li a .x{
+        color: red;
+      }
+    </style>
+</head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Tareas</h1>
+      <div class="row my-5">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 float-right">
+          <form class="form-row align-items-center" action="/agregar-tarea" method="POST">
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="descripcion" placeholder="Nueva Tarea">
+            </div>
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-outline-primary">Agregar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <ul class="list-group">
+        <% for(let i=0; i<tareas.length; i++) { %>
+          <div class="row">
+            <div class="col">
+              <li class="list-group-item my-2">
+                <a href="/actualizar-formulario?id=<%=tareas[i].id%>"><%=tareas[i].descripcion%></a>
+                <p class="my-2">Recursos:</p>
+                <ol>
+                  <% for(let j=0; j<tareas[i].recursos.length; j++) { %>
+                    <li><%=tareas[i].recursos[j]%></li>
+                  <% } %>
+                </ol>
+              </li>
+            </div>
+            <div class="col my-2">
+                <a class="btn btn-outline-danger" href="/eliminar-tarea?id=<%=tareas[i].id%>" onclick="return confirm('¿Está seguro de eliminar esta tarea?')">X</a>
+            </div>
+          </div>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
