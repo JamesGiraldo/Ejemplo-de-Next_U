@@ -30,8 +30,8 @@ var EventoModelo=mongoose.model("Evento",EventoSchema);
 app.use(express.static("client"));
 app.use(body_parser.urlencoded({extended:true}));
 
-app.listen(3000, function () {
-  console.log('Escuchando por el puerto 3000');
+app.listen(3003, function () {
+  console.log('Escuchando por el puerto 3003');
   CrearUsuarios("jalvarado@mail.com","87654321");
 });
 
@@ -102,6 +102,7 @@ app.get("/events/all",function(req,res){
       Retorno=JSON.parse(consulta);
     }
     res.end(consulta);
+    console.log('probando si imprime el id: ', res._id);
   });
 })
 

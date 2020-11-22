@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-	<label for="paises">Ultímo país visitado</label>
-	<select name="paises" id="listaPaises">
-	<option value="">Seleccione</option>
-	<option value="1">México</option>
-	<option value="2">Colombia</option>
-	<option value="3">Brasil</option>
-	</select>
+	<head>
+		<meta charset="UTF-8">
+		<title>localStorage</title>
+	</head>
+	<body>
+			<div class="">
+				<label for="paises">Seleccione ultímo país visitado </label>
+				<select name="paises" id="listaPaises">
+					<option value="">Seleccione</option>
+					<option value="México">México</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Brasil">Brasil</option>
+				</select>
+				<input type="submit" value="Visitar" onclick="guardarPais()"><br>
+				<p>El ultimo país visitado es: <span id="ultimoPaisVisitado" style="color: red;"> ... </span> </p>
+			</div>
+			<script type="text/javascript">
+				function guardarPais() {
+					var pais = document.getElementById('listaPaises').value
+					localStorage.setItem('Ultimo-pais-visitado', pais); // para guardar
+					mostrarPaís()
+				}
 
-	<input type="submit" value="Visitar" onclick="guardarPais()">
-
-	<div id="ultimoPaisVisitado">El ultimo país visitado es: </div>
-	<script type="text/javascript">
-		function guardarPais() {
-			var pais = document.getElementById('listaPaises').value
-			localStorage.setItem('ultimo', pais); // para guardar
-			mostrarPaís()
-		}
-
-		function mostrarPaís() {
-			var paisObt = localStorage.getItem('ultimo')
-			document.getElementById("ultimoPaisVisitado").innerHTML = paisObt
-		}
-	</script>
-</body>
+				function mostrarPaís() {
+					var paisObt = localStorage.getItem('Ultimo-pais-visitado')
+					document.getElementById("ultimoPaisVisitado").innerHTML = paisObt
+				}
+			</script>
+	</body>
 </html>

@@ -1,0 +1,13 @@
+<div class="col-sm-6 well col-sm-offset-3">
+  <h1>Nuevo Usuario</h1>
+  <form>
+    <div class="form-group">
+      <label for="email-input">Dirección correo electrónico</label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="email" (focus)="resetErrorLogin()">
+      <label class="error" >{{error}}</label>
+      <button type="submit" class="btn btn-success center-block" (click)="validarCorreo()">Enviar</button>
+    </div>
+  </form>
+</div>
+
+
