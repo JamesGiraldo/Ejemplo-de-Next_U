@@ -5,13 +5,13 @@ function abrir() {
 function cargarDatos() {
     $.ajax({
         url: "http://127.0.0.1:5500/datos.json"
-    }).done(function (respuesta) {
+    }).done(function(respuesta) {
         arreglo = respuesta.canciones;
         arreglo = arreglo.sort((cancion1, cancion2) => {
             return cancion2.reproducciones - cancion1.reproducciones
-        })
-        for (x=0;x<3;x++){
-            var nombreCancion=arreglo[x].nombre
+        });
+        for (x = 0; x < 3; x++) {
+            var nombreCancion = arreglo[x].nombre
             var rutaCancion = "http://127.0.0.1:5500/canciones/" + arreglo[x].ruta;
             var html = `<tr>
                             <td class="text-center">${nombreCancion}</td>
@@ -21,19 +21,19 @@ function cargarDatos() {
                                     El navegador utilizado no soporta ese formato de audio </audio>
                                 </p>
                             </td>
-                        </tr>`
+                        </tr>`;
             $("#cuerpo-tabla").append(html);
         }
     });
 };
 
-function muestraCanciones(){
-    arreglo=respuesta.canciones;
+function muestraCanciones() {
+    arreglo = respuesta.canciones;
     console.log("Estoy en muestra canciones y el arreglo es: " + arreglo);
     mostrarArreglo(arreglo);
 };
 
-function mostrarArreglo(arreglo){
+function mostrarArreglo(arreglo) {
     var fila = "";
     var campoBuscar = $.trim($("#inputBuscar").val());
     if (campoBuscar.length > 0) {
@@ -75,157 +75,20 @@ function mostrarArreglo(arreglo){
                                     </audio>
                                 </p>
                             </div>
-                        </div>`
+                        </div>`;
             console.log(html);
             $("#lista-canciones").append(html);
-            /*switch (x) {
-                case 0:
-                    console.log("primera figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                        <div class="col-12 col-sm-12">
-                            <p class="text-center">
-                                <img class="img-fluid" src=${iconoArreglo} width="50" alt=>
-                            </p>
-                            <p class="text-center"><strong>${nombreCancion}</strong></p>
-                            <p class="text-center">
-                                <audio controls>
-                                    <source src = ${rutaCancion} type="audio/mp3">
-                                    El navegador utilizado no soporta ese formato de audio</audio>
-                            </p>
-                        </div>
-                    </div>`
-                    console.log(html);
-                    $("#lista-canciones").append(html);
-                    break;
-                case 1:
-                    console.log("segunda figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                        <div class="col-12 col-sm-12">
-                            <p class="text-center">
-                                <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                            </p>
-                            <p class="text-center"><strong>${nombreCancion}</strong></p>
-                            <p class="text-center">
-                                <audio controls>
-                                    <source src = ${rutaCancion} type="audio/mp3">
-                                    El navegador utilizado no soporta ese formato de audio</audio>
-                            </p>
-                        </div>
-                    </div>`
-                    $("#lista-canciones").append(html);
-                    break;
-                case 2:
-                    console.log("tercera figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                    <div class="col-12 col-sm-12">
-                    <p class="text-center">
-                       <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                    </p><p class="text-center"><strong>${nombreCancion}</strong ></p>
-                    <p class="text-center">
-                       < audio controls >< source src = ${rutaCancion} type=audio/mp3>
-                          El navegador utilizado no soporta ese formato de audio</audio></p>
-                    </div></div>`
-                    $("#lista-canciones").html = html;
-                    break;
-                case 3:
-                   console.log("cuarta figura");
-                   var html = `
-                    <div class="col-md-4 py-2">
-                    <div class="col-12 col-sm-12">
-                    <p class="text-center">
-                       <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                    </p><p class="text-center"><strong>${nombreCancion}</strong ></p>
-                    <p class="text-center">
-                       < audio controls > < source src = ${rutaCancion} type=audio/mp3>
-                          El navegador utilizado no soporta ese formato de audio</audio></p>
-                    </div></div>`
-                   $("#lista-canciones").append(html);
-                   break;
-               case 4:
-                   console.log("quinta figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                    <div class="col-12 col-sm-12">
-                    <p class="text-center">
-                       <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                    </p><p class="text-center"><strong>${nombreCancion}</strong ></p>
-                    <p class="text-center">
-                       < audio controls > < source src = ${rutaCancion} type=audio/mp3>
-                          El navegador utilizado no soporta ese formato de audio</audio></p>
-                    </div></div>`
-                    $("#lista-canciones").append(html);
-                    break;
-               case 5:
-                   console.log("sexta figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                    <div class="col-12 col-sm-12">
-                    <p class="text-center">
-                       <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                    </p><p class="text-center"><strong>${nombreCancion}</strong ></p>
-                    <p class="text-center">
-                       < audio controls > < source src = ${rutaCancion} type=audio/mp3>
-                          El navegador utilizado no soporta ese formato de audio</audio></p>
-                    </div></div>`
-                    $("#lista-canciones").html = html;
-                    break;
-                case 6:
-                    console.log("septima figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                    <div class="col-12 col-sm-12">
-                    <p class="text-center">
-                       <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                    </p><p class="text-center"><strong>${nombreCancion}</strong ></p>
-                    <p class="text-center">
-                       < audio controls > < source src = ${rutaCancion} type=audio/mp3>
-                          El navegador utilizado no soporta ese formato de audio</audio></p>
-                    </div></div>`
-                    $("#lista-canciones").append(html);
-                    break;
-                case 7:
-                    console.log("octava figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                    <div class="col-12 col-sm-12">
-                    <p class="text-center">
-                       <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                    </p><p class="text-center"><strong>${nombreCancion}</strong ></p>
-                    <p class="text-center">
-                       < audio controls > < source src = ${rutaCancion} type=audio/mp3>
-                          El navegador utilizado no soporta ese formato de audio</audio></p>
-                    </div></div>`
-                    $("#lista-canciones").append(html);
-                    break;
-                case 8:
-                    console.log("novena figura");
-                    var html = `
-                    <div class="col-md-4 py-2">
-                    <div class="col-12 col-sm-12">
-                    <p class="text-center">
-                       <img class="img-fluid" src=${iconoArreglo} width= "50" alt=>
-                    </p><p class="text-center"><strong>${nombreCancion}</strong ></p>
-                    <p class="text-center">
-                       < audio controls > < source src = ${rutaCancion} type=audio/mp3>
-                          El navegador utilizado no soporta ese formato de audio</audio></p>
-                    </div></div>`
-                    $("#lista-canciones").append(html);
-                    break;
-            };*/
         };
     };
 };
 
-function activa_carrusel(){
+function activa_carrusel() {
     var imgItems = $('.carrusel img').length;
     var imgPos = 1;
     $('.carrusel img').hide();
     $('.carrusel img:first').show();
 
-    setInterval(function () {
+    setInterval(function() {
         nextSlider();
     }, 3000);
 
@@ -257,8 +120,8 @@ function activa_carrusel(){
     }
 };
 
-$(document).ready(function () {
-    $("button.cargar").click(function () {
+$(document).ready(function() {
+    $("button.cargar").click(function() {
         cargarDatos();
     });
     activa_carrusel();

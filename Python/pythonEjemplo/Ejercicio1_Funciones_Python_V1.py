@@ -5,7 +5,7 @@ def esmoneda(cripto):
     else:
         return False
 
-def esnumero(numero): 
+def esnumero(numero):
     return numero.replace('.','',1).isdigit()
 
 total=0
