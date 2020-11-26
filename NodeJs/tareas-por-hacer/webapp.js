@@ -6,8 +6,8 @@ const bodyParser = require('body-parser')
 const pool = mysql.createPool({
     connectionLimit: 20,
     host: 'localhost',
-    user: 'james',
-    password: 'james',
+    user: 'root',
+    password: '',
     database: 'tareas_app'
 })
 

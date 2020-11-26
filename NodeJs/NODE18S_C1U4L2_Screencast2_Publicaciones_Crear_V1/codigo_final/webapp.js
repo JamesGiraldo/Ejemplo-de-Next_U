@@ -8,8 +8,8 @@ const flash = require('express-flash')
 var pool = mysql.createPool({
   connectionLimit: 20,
   host: 'localhost',
-  user: 'james',
-  password: 'james',
+  user: 'root',
+  password: '',
   database: 'blog_viajes'
 })
 
@@ -164,7 +164,7 @@ aplicacion.get('/admin/agregar', function (peticion, respuesta) {
 aplicacion.post('/admin/procesar_agregar', function (peticion, respuesta) {
   pool.getConnection(function (err, connection) {
     const date = new Date()
-    // con este se valida que no imprima etiquetas html 
+    // con este se valida que no imprima etiquetas html
     // var contenido = connection.escape(peticion.body.contenido)
     //     contenido = contenido.replace(/<[^>]+>n*/g, ""\;'')
     const fecha = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
