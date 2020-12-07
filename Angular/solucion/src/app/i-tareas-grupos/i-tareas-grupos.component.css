@@ -1,0 +1,32 @@
+.card{
+    height: 19.5em;
+}
+.grupos-container{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 25px;
+}
+.item-grupo{
+    width: 25%;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 134px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.img-grupo.resaltado{
+    background-color: white!important;
+}
+.img-grupo{
+    width: 80%;
+    height: 80%;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.large-icon{
+    font-size: 40px;
+}

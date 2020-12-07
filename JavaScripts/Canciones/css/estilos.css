@@ -3,7 +3,7 @@ h1{
   font-family: "Times New Roman";
   color:blue;
 }
-  
+
 h2{
   font-family: "Times New Roman";
 }
@@ -16,6 +16,6 @@ table thead th{
   font-family: "Times New Roman";
 }
 
-  .error {
-    color: red;
-  }
+.error {
+  color: red;
+}

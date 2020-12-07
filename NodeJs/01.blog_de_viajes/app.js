@@ -8,8 +8,8 @@ const flash = require('express-flash')
 var pool = mysql.createPool({
     connectionLimit: 20,
     host: 'localhost',
-    user: 'james',
-    password: 'james',
+    user: 'root',
+    password: '',
     database: 'blog_viajes'
 });
 
@@ -74,7 +74,7 @@ aplicacion.post('/procesar_registro', (req, res) => {
                         res.redirect('/registrarse')
                     } else {
                         const consulta = `
-                        insert into autores (email,contrasena,pseudonimo) values 
+                        insert into autores (email,contrasena,pseudonimo) values
                         (${connection.escape(email)},
                         ${connection.escape(contrasena)},
                         ${connection.escape(pseudonimo)})`
@@ -97,7 +97,7 @@ aplicacion.get('/inicio', (req, res) => {
 
 aplicacion.post('/procesar', (req, res) => {
     pool.getConnection(function(err, connection) {
-        const consulta = `SELECT * FROM autores WHERE 
+        const consulta = `SELECT * FROM autores WHERE
         email = ${connection.escape(req.body.email)} AND contrasena = ${connection.escape(req.body.contrasena)}`
 
         connection.query(consulta, (error, filas, campos) => {
