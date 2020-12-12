@@ -1,0 +1,42 @@
+.barra{
+  background: #f9a825;
+  position: fixed;
+}
+.menuItem{
+  font-size: 1.4rem;
+  color: #fff;
+}
+.menuItem:hover{
+  color: #9d9d9d;
+}
+#FoundationLogo{
+  font-size: 1.2rem;
+}
+.imagenColumnas{
+  border-radius: 50%;
+}
+.empresas{
+  margin-top: 10px;
+}
+.iconoFormulario{
+  padding: 0;
+}
+.columnaFormulario{
+  padding: 2rem;
+}
+textarea{
+  min-height: 174px;
+}
+.button.hollow{
+  border: 1px solid #ff8f00;
+  color: #f9a825;
+}
+@media all and (max-width: 39.9375em){
+  .menuItem{
+    font-size: 0.8rem;
+  }
+
+  .barra{
+    position: relative;
+  }
+}
