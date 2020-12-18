@@ -1,0 +1,13 @@
+<nav class="top-bar">
+  <div class="top-bar-left">
+    La bodega
+  </div>
+  <div class="top-bar-right">
+    <a [routerLink]="'/store/products'"><span class="oi oi-grid-two-up"></span></a>
+    <a [routerLink]="'/store/checkout'">
+      <span class="oi oi-cart"></span>
+      <span class="badge badge-danger badge-pill" *ngIf="count > 0">{{count}}</span>
+    </a>
+    <a [routerLink]="'/'"><span class="oi oi-account-logout"></span></a>
+  </div>
+</nav>

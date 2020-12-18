@@ -1,0 +1,49 @@
+
+.store-header{
+  padding: 15px;
+  background: #FFF;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.store-body{
+  height: 30em;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: #FFF;
+}
+.card{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card-img-top{
+  height: 200px;
+}
+.card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.card a, button,input{
+  margin-top: 5px;
+}
+input[type="number"]{
+  width: 80px;
+}
+@media screen and (min-width: 575px){
+  .store-body{
+    height: 45em;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .card{
+    width: 95%;
+  }
+  .card-img-top{
+    height: 250px;
+  }
+}

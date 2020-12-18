@@ -1,0 +1,19 @@
+.shopping-cart-title{
+  padding: 20px;
+  background: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.shopping-cart-body{
+  padding: 10px;
+  min-height: 25em;
+  background: #fff;
+}
+.list-item-thumb{
+  width: 100px;
+  padding: 0 5px;
+  border-radius: 100px;
+}
+.bloque-pago{
+  padding: 10px;
+}

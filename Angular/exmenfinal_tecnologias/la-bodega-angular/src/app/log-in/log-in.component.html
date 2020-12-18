@@ -1,0 +1,36 @@
+<div class="log-in">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form (ngSubmit)="onAttemptToLog(f)" #f="ngForm">
+          <div class="text-center log-in-form">
+            Iniciar Session
+          </div>
+          <div class="form-group">
+            <label for="">Correo electronico</label>
+            <input type="email" name="name" ngModel class="form-control" required email #email="ngModel">
+            <span class="help-block" *ngIf="!email.vali && email.touched"></span>
+          </div>
+          <div class="form-group">
+            <label for="">Contraseña</label>
+            <input type="password" name="pass" ngModel class="form-control" required>
+          </div>
+          <p class="text-left error" *ngIf="!email.valid && email.touched">Correo invalido</p>
+          <p class="text-left error" *ngIf="errorMessage">Error al iniciar sesion</p>
+          <div class="form-group text-center">
+              <button
+              class="btn btn-success"
+              type="submit"
+              [disabled]='!f.valid'
+              >
+              Acceder
+              </button>
+          </div>
+      </form>
+      </div>
+    <div class="col-md-3"></div>
+    </div>
+</div>
+</div>

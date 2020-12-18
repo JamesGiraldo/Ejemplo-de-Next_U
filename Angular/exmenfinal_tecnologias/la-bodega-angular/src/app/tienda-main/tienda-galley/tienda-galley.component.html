@@ -1,0 +1,64 @@
+
+
+
+<div class="row store-header">
+
+  <div class="col-md-8">
+      <h1>Catalogo de Productos</h1>
+  </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for=""><strong>Que estas buscando?</strong></label>
+              <input type="text"
+              [(ngModel)]="term"
+              class="form-control"
+              placeholder="Buscar producto..">
+        </div>
+    </div>
+  <hr>
+  </div>
+  <div class="row store-body">
+
+    <div class="col-sm-6 col-lg-3" *ngFor="let producto of productos | filter:term">
+      <div class="card">
+        <img src="/assets/img/{{producto.imgPath}}"
+          alt=""
+          class="card-img-top img-fluid">
+        <div class="card-block">
+          <h3 class="card-title">
+            {{producto.name}}
+          </h3>
+          <p>Precio: {{producto.price | currency}}</p>
+          <p>Disponible: {{producto.available}}</p>
+
+
+          <form>
+            <div class="row">
+                <div class="col">
+                  <a routerLink="/store/detail/{{producto.name}}/${{producto.price}}/{{producto.imgPath}}/{{producto.available}}"
+                    class="btn btn-success">
+                  <span class="oi oi-magnifying-glass"></span>
+                  </a>
+                  <button
+                    class="btn btn-warning"
+                    (click)="onAdd(producto,amountInput)"
+                    >
+                    <span class="oi oi-cart"></span>
+                  </button>
+                </div>
+
+                <div class="col">
+                    <input type="number"
+                    [value]="producto.purchased"
+                    class="form-control"
+                    #amountInput>
+                </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+</div>

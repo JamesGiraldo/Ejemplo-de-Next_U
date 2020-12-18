@@ -1,0 +1,37 @@
+<div class="row shopping-cart-title">
+  <h3>{{title}}</h3>
+  <hr>
+  <br>
+</div>
+<div class="row shopping-cart-body">
+  <div class="col-xs-12 col-md-8">
+    <h1 *ngIf="!orden.length" class="text-center">{{message}}</h1>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let x of orden">
+        <span><img src="/assets/img/{{x.imgPath}}" alt="x.name" class="list-item-thumb">
+          <p><strong>Subtotal: </strong>{{x.purchased * x.price | currency}}</p></span>
+        <ul>
+          <li><strong>Producto: </strong>{{x.name}}</li>
+          <li><strong>Cantidad: </strong>{{x.purchased}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <div  *ngIf="orden.length" class="bloque-pago">
+      <h2 style="margin-top:10px">Total {{sum | currency}}</h2>
+      <p class="lead"></p>
+
+      <button class="btn btn-success"
+      (click)="onPagar()">
+      Pagar
+      </button>
+
+      <button class="btn btn-danger"
+      (click)="onCancel()">
+      Cancelar
+      </button>
+
+    </div>
+  </div>
+ </div>

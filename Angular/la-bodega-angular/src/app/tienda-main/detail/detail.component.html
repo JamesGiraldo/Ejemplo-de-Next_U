@@ -1,0 +1,24 @@
+<div class="row detail-title">
+  <h1>{{producto.name}}</h1>
+  <hr>
+</div>
+<div class="row detail-body">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-10">
+          <div class="row">
+            <div class="text-center img-container">
+              <img src="/assets/img/{{producto.image}}" alt="{{producto.name}}"class="img-fluid">
+            </div>
+            <a routerLink="/store/products" class="btn btn-info goBack"><span class="oi oi-arrow-circle-left"></span></a>
+          </div>
+      </div>
+      <div class="col-md-2">
+        <ul class="detail-list">
+          <li><strong>Precio: </strong>{{producto.price}}</li>
+          <li><strong>Disponible: </strong>{{producto.available}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

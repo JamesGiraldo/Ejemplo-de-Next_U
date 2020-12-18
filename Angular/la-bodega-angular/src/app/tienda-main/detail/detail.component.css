@@ -1,0 +1,26 @@
+
+.detail-title{
+  padding: 20px;
+  background: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.detail-body{
+  min-height: 35em;
+  background: #fff;
+}
+.goBack{
+  margin:30px auto;
+}
+.img-container{
+  width: 80%;
+  margin: 10%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 2s;
+}
+.detail-list{
+  list-style: none;
+}
+.img-container:hover{
+  box-shadow: 0 0 0 0 ;
+}

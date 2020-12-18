@@ -1,0 +1,3 @@
+BTC:MONEDA BTC
+BTA:Ahí
+OK:bien

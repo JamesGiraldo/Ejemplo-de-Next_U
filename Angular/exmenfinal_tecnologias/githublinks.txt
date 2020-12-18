@@ -1,0 +1,10 @@
+https://github.com/MarcoVPQ/SPA-Angular
+https://github.com/MarcoVPQ/SPA-React
+
+usuarios para la aplicacion angular
+
+Admin@admin.com
+password 1234
+
+User2@user2.com
+password 12345

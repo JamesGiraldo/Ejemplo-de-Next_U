@@ -1,0 +1,50 @@
+.top-bar{
+  line-height: 50px;
+  background-color: #c6c6c4;
+  margin-bottom: 15px;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+.top-bar-left{
+  font-size: 40px;
+  font-weight: bolder;
+}
+.top-bar-right a{
+  display: block;
+  font-weight: bold;
+  color: #fff;
+
+  padding: 10px;
+  text-align: left;
+}
+.top-bar-right a:hover{
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  text-decoration: none;
+
+}
+.top-bar:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+@media screen and (min-width: 575px){
+.top-bar{
+  line-height: 100px;
+}
+.top-bar-left{
+  float: left;
+  padding-left: 15px;
+}
+.top-bar-right{
+  float: right;
+  margin-right: 10px;
+}
+.top-bar-right a{
+  display: inline-block;
+  line-height: 100px;
+  padding: 0 40px;
+  font-size: 18px;
+}
+}

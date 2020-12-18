@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejemplo</title>
+  <style type="text/css">
+    body{
+    font-family: Arial;
+    color: cadetblue;
+    font-weight: bold;
+}
+main>span{
+    border: solid 2px black;
+    padding: 10px;
+    margin-left: 10px;
+
+}
+
+main>div{
+    border:solid 2px black;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 40%;
+    height: 100%;
+}
+  </style>
+</head>
+<body>
+  <h1>Pestañas</h1>
+  <main>
+    <span onclick="pestana1()" id="pestana1">Pestaña 1</span>
+    <span onclick="pestana2()" id="pestana2">Pestaña 2</span>
+    <div id ="divChange">Este es el contenido 1</div>
+  </main>
+</body>
+<script type="text/javascript">
+  function pestana1() {
+  document.getElementById("divChange").innerText="Este es el contenido 1"
+}
+
+function pestana2(){
+  document.getElementById("divChange").innerText="Este es el contenido 2"
+}
+</script>
+</html>

@@ -1,0 +1,14 @@
+.main{
+  min-height: 1300px;
+  background: url(/../assets/img/main-fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/*Es 100% arregalr con media query*/
+@media screen and (min-width: 575px){
+  .container{
+    width: 80%;
+
+  }
+}

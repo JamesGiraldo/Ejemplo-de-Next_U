@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejemplo</title>
+
+  <style>
+    .error {
+      color: red
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Registro</h1>
+  <form action="" >
+    <p>
+      <label>Nombre</label>
+      <input type="text" name="nombre" id="nombre">
+      <span id="errorNombre" class="error"></span>
+    </p>
+    <p>
+      <label>Email</label>
+      <input type="text" name="email" id="email">
+      <span id="errorEmail" class="error"></span>
+    </p>
+    <p>
+      <label>Contraseña</label>
+      <input type="password" name="contrasena" id="contrasena">
+      <span id="errorContrasena" class="error"></span>
+    </p>
+    <p>
+      <label>Contraseña (Confirmación)</label>
+      <input type="password" name="confirmacion" id="confirmacion">
+      <span id="errorConfirmacion" class="error"></span>
+    </p>
+
+    <p>
+      <p>Género <span id="errorGenero" class="error"></span></p>
+      <input type="radio" name="genero" id="m" value="m">
+      <label for="m">Masculino</label>
+      <input type="radio" name="genero" id="f" value="f">
+      <label for="f">Femenino</label>
+
+    </p>
+
+    <p>
+      <label>País</label>
+      <select name="pais" id="pais">
+        <option value="">Seleccione</option>
+        <option value="1">Colombia</option>
+        <option value="2">Brasil</option>
+        <option value="3">México</option>
+      </select>
+      <span id="errorPais" class="error"></span>
+    </p>
+
+    <p>
+      <label for="terminos">
+        <input type="checkbox" name="terminos" id="terminos" value="acepta"> Acepta términos y condiciones</label>
+        <span id="errorTerminos" class="error"></span>
+    </p>
+
+    <p>
+      <input type="submit" value="Continuar" onclick="return validar(this.form)">
+    </p>
+
+
+  </form>
+
+  <script src="./javascripts/script.js"></script>
+</body>
+
+</html>
