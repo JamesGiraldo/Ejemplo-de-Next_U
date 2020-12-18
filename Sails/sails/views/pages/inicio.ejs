@@ -1,0 +1,26 @@
+<h1>Inicio</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Empresa</th>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Zona</th>
+      <th>Horario</th>
+      <th>Disponible</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% cerrajeros.forEach(cerrajero=> { %>
+      <tr>
+        <td><%=cerrajero.empresa.nombre%></td>
+        <td><%=cerrajero.nombre%></td>
+        <td><%=cerrajero.telefono%></td>
+        <td><%=cerrajero.zona%></td>
+        <td><%=cerrajero.horario%></td>
+        <td><%=cerrajero.disponible? "Si" : "No"%></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
