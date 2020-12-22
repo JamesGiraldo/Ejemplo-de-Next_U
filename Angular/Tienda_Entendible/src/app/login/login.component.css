@@ -1,0 +1,19 @@
+.background-login {
+    background-image: url("/assets/fotos proyecto final/imagenesBase/login-fondo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.bg-rgba {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.form-login {
+    width: 30% !important;
+}
+
+.form-login>.form-group>label, .background-login>div>h2 {
+    color: white !important;
+}

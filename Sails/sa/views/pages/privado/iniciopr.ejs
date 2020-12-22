@@ -1,0 +1,10 @@
+<div id="inicio" v-cloak>
+
+    <h3>INICIO</h3>
+    <h6>Bienvenido: <%=session.cliente.email %></h6>
+    <hr>
+    <%- partial ('../../partials/cuadrillafotos') %>
+  
+  </div>
+  <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
+    

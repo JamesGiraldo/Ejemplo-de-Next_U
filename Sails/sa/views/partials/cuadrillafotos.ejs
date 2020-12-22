@@ -1,0 +1,21 @@
+
+
+<div class = 'container-fluid'>
+    <div class = 'row'>
+        <% fts.forEach(foto =>
+        {%>
+          <div class ='col-12 col-md-3'>
+            <div class="card" >
+              <img src= '<%=foto.url %>' class="img-thumbnail" alt="<%=foto.alt%>">
+              <div class="card-body">
+                  <h5 class="card-title">Foto</h5>
+                  <p class="card-text">Descripcion</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+          </div>    
+        <% })%>  
+
+    </div>
+</div>
+

@@ -1,0 +1,15 @@
+.background-home {
+    background-image: url("/assets/fotos proyecto final/imagenesBase/main-fondo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 899px) {
+    .background-home {
+        padding: 0;
+    }
+}

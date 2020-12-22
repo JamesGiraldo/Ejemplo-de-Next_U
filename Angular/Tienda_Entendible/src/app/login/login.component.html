@@ -1,0 +1,19 @@
+<div class="background-login">
+  <div class="bg-rgba d-flex flex-column align-items-center justify-content-center vh-100 mx-auto">
+    <h2>Inicia Sesión</h2>
+    <form class="form-login" (ngSubmit)="onSubmitLogin()">
+      <div class="form-group">
+        <label>Correo electrónico:</label>
+        <input type="email" class="form-control" name="email" placeholder="test@gmail.com" [(ngModel)]="email"
+          (focus)="resetErrorLogin()" required>
+      </div>
+      <div class="form-group">
+        <label>Contraseña:</label>
+        <input type="password" class="form-control" name="password" placeholder="test123" [(ngModel)]="password"
+          (focus)="resetErrorLogin()" required>
+        <small class="form-text text-danger"><b>{{isError}}</b></small>
+      </div>
+      <button type="submit" class="btn btn-success mx-auto d-flex mt-4">Ingresar</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+h4,.card-title{
+    text-transform: capitalize !important;
+}
+.card-subtitle, .card-text {
+    font-size: 14px !important;
+}
+
+.btn-card {
+    width: 150px !important;
+    height: 40px !important;
+    font-size: 10px !important;
+}
+
+.input-value {
+    font-size: 12px !important;
+    width: 50%;
+}
+
+.contents-products {
+    height: 65vh;
+    overflow: auto;
+}
+
+.img-detail {
+    border: 1px solid rgba(0, 0, 0, 0.329);
+}

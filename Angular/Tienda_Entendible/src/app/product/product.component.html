@@ -1,0 +1,88 @@
+<div class="card mt-3 p-3">
+  <div class="row">
+    <div class="col-md-9 col-xs-12">
+      <h4>{{title}}</h4>
+    </div>
+    <div class="col-md-3 col-xs-12">
+      <div *ngIf="title === 'Catálogo de productos'">
+        <label>¿Qué estas buscando?</label>
+        <input #search type="text" class="form-control" (keyup)="searchProduct(search.value)"
+          placeholder="Buscar producto">
+      </div>
+    </div>
+  </div>
+
+  <!-- All Products -->
+  <div class="row mt-4 contents-products " *ngIf="title === 'Catálogo de productos'">
+    <div class="col-md-3 col-xs-12 mt-3" *ngFor="let data of listData">
+      <div class="card">
+        <img src="{{pathImg + data.name}}.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{data.name}}</h5>
+          <h6 class="card-subtitle mt-2"><b>Precio:</b> {{data.price | formatNumber}}</h6>
+          <p class="card-text mt-2"><b>Unidades Disponibles:</b> {{data.stock}}</p>
+          <div class="d-flex mt-2">
+            <button type="button" class="btn-card btn btn-primary" (click)="getDetailsProduct(data);">Ver
+              Más</button>
+            <button type="button" class="ml-2 btn-card btn btn-warning text-white"
+              (click)="addProduct(data,inputAdd.value)">Añadir</button>
+            <input #inputAdd type="number" class="ml-1 form-control input-value" min="1" value="1" max="100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-xs-12 mt-3" *ngIf="listData && listData.length == 0">
+      <div class="d-flex flex-column align-items-center justify-content-center mx-auto">
+        <img class="rounded" width="120px" src="{{pathImg + 'not_result'}}.png">
+        <br>
+        <h2>¡Lo sentimos!</h2>
+        <p>No encontramos resultados para esta búsqueda</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product details -->
+  <div class="row mt-4 p-1" *ngIf="title !== 'Catálogo de productos' &&  title !== 'Carrito de compras'">
+    <div class="col-md-6  col-xs-12">
+      <div class="img-detail rounded">
+        <img class="rounded" width="100%" src="{{pathImg + details.name}}.jpg">
+      </div>
+      <button type="button" class="mt-3 btn btn-outline-secondary" (click)="changeTitle('0')">Atrás</button>
+    </div>
+    <div class="col-md-6  col-xs-12">
+      <h6 class="mt-2"><b>Precio:</b> {{details.price | formatNumber}}</h6>
+      <p class="mt-2"><b>Unidades Disponibles:</b> {{details.stock}}</p>
+    </div>
+  </div>
+
+  <!-- Buy Products -->
+  <div class="row" *ngIf="title === 'Carrito de compras'">
+    <div class="col-md-6 col-xs-12">
+      <ul class="list-group contents-products">
+        <li class="list-group-item" *ngFor="let data of listBuyData">
+          <div class="row no-gutters mt-4">
+            <div class="col-md-4">
+              <img src="{{pathImg + data.name}}.jpg" class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{data.name}}</h5>
+                <h6 class="card-subtitle mt-2"><b>Precio:</b> {{data.price | formatNumber}}</h6>
+                <p class="card-text mt-2"><b>Unidades:</b> {{data.purchasedAmount}}</p>
+              </div>
+            </div>
+            <p><b>Subtotal:</b> {{data.price * data.purchasedAmount | formatNumber}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <h4 class="mt-2"><b>Total:</b> {{totalBuyProduct | formatNumber}}</h4>
+      <div class="btn-group btn-group-toggle">
+        <button type="button" class="mt-3 btn btn-outline-secondary" (click)="changeTitle('0')">Cancelar</button>
+        <button type="button" class="mt-3 btn btn-outline-secondary" (click)="processToBuy()">Pagar</button>
+      </div>
+    </div>
+  </div>
+
+</div>
