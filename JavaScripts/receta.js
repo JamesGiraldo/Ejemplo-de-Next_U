@@ -10,6 +10,6 @@ function capitalize(x) {
 }
 
 function receta(ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, comida) {
-    return ("Mi bolsa de comida: Nombre de la receta " + comida + " Ingredientes: " + ingrediente1 + ", " + ingrediente2 + ", " + ingrediente3 + ", " + ingrediente4 + ", " + ingrediente5 + ".");
+    return (`Mi bolsa de comida: La receta ${comida}  Ingredientes:  ${ingrediente1}  ${ingrediente2} ${ingrediente3} ${ingrediente4} ${ingrediente5}`);
 }
 console.log(receta(ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, comida));
