@@ -3,11 +3,14 @@
 # Fundamentos basicos de programacion en Python, NextU
 # Actividad Final Unidad 1
 #
-# Observe las acciones realizadas en este programa y la 
+# Observe las acciones realizadas en este programa y la
 # salida que produce al ejecutar: python3 test.py
-# 
+#
 
 import platform
+
+# print (float(2 * (3-1) - (1+1)**(5-2))/ 2 * 20.08) 
+# print ("Estoy aumentando mi portafolio", len("mejores criptomonedas del 2018: Ethereum, Bitcoin, Icon y Neo") >= 10 and len("soy muy feliz") < 15 )
 
 print('Curso             : Fundamentos basicos de programacion en Python')
 print('Unidad            : 1')

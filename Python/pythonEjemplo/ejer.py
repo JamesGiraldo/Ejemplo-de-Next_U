@@ -11,7 +11,7 @@ def capturar_moneda():
     # se declara un input o sea una caja de texto el cual lo que escriba en la consola se guarda en la variable definida como cripto
     cripto   = input("ingrese el nombre la moneda: ")
     # se declara un input que almacenara lo que escribe en la variable cantidad
-    cant     = float(input("Ingrese" + '\n' + "la cantidad de la moneda: "))
+    cant     = float(input("Ingrese la cantidad de la moneda: "))
     # se declara un input que almacenara lo que escribe en la variable cotiz
     cotiz    =  float(input("Ingrese la cotización en USD de la moneda: "))
     # operación multiplica la cantidad por la cotización
@@ -20,8 +20,8 @@ def capturar_moneda():
 i=0
 valor=0.0
 # esto es para hacer un recorrido de que miesntras i sea menor a 5 va a recorrer 5 veces la función definida arriba
-while i < 5:
+while i < 2:
  valor = valor + capturar_moneda()
  i=1+1
  # imprime el resultado
-print("Usted tiene " + valor + " Dólares Americanos")
+ print("Usted tiene " + str(valor) + " Dólares Americanos")
