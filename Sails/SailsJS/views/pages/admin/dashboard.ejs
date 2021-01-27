@@ -1,0 +1,20 @@
+<h4 class="text-center">Dashboard Administrador</h4>
+<div class="row">   
+    <% totales.forEach(item => {%>
+    <div class="col-md-3 my-2">
+        <div class="card">
+            <div class="card-header bg-info text-white text-center">
+                <%=item.nombre%>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <h6>Cantidad Total: <%=item.cantidad%></h6>
+            </div>
+        </div>
+    </div>
+    <%})%>
+</div>
