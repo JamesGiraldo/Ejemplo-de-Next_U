@@ -1,0 +1,15 @@
+ .cont-list {
+     max-height: 100px;
+     height: 300px;
+     overflow: scroll;
+ }
+ .star{
+     font-family: 'Font Awesome 5 Free';
+     font-weight: 900;
+ }
+
+ .star::after{
+     font-size: 1em;
+     margin-left: .5em;
+     content: "\f005";
+ }

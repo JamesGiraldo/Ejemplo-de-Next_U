@@ -1,0 +1,13 @@
+Aplicacion con el Framework de JavaScript React
+
+-El Fichero .env fue creado para poder correr la aplicacion, me daba error y con esto se logro solucionar
+
+-Entrar en la Carpeta REACT_Lester_Toledo con el Terminal y poner el Comando npm install para instalar los modulos de Node
+
+-Luego poner el comando npm start para iniciar la Aplicacion
+
+-La Ubicacion origen fue seleccionada en Santa Cruz Bolivia Empresa Smart
+
+-En algunas ocaciones no carga bien las imagenes producto de error en la API de Google
+
+Disfruten de la Aplicacion.
