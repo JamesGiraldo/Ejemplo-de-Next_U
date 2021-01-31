@@ -1,0 +1,16 @@
+<div class=" details-container ">
+<h4>{{producto.nombre}}</h4>
+<div class="divider"></div>
+  <div class="row">
+    <div class="col l12">
+      <div class="col l6">
+        <img class="col l12 responsive-img"src="/image/{{producto.nombre}}.jpg" alt="">
+      </div>
+      <div class="col l6">
+        <p>Precio: S./{{producto.precio}}</p>
+        <p>Cantidad Disponible:{{producto.disponible}}</p>
+      </div>
+    </div>
+    </div>
+<a (click)="back()" class="btn">Atras</a>
+</div>

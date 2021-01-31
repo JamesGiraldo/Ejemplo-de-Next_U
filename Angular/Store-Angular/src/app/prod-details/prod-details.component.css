@@ -1,0 +1,15 @@
+.details-container{
+  background-color: white;
+}
+.details-container img{
+border: 1px solid black;
+border-radius: 5px;
+margin: 10px!important;
+padding: 0;
+}
+.details-container h4{
+  padding:  10px !important;
+}
+.details-container .btn{
+  margin: 10px!important;
+}

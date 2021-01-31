@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="nav-bar"  >
+    <app-nav-bar  (ShowCart)="showCart()" ></app-nav-bar>
+  </div>
+  <div *ngIf="catalogoVisible"  class="">
+    <app-catalogo></app-catalogo>
+  </div>
+  <div   *ngIf="detailsVisible" class="">
+    <app-prod-details></app-prod-details>
+  </div>
+  <div *ngIf="cartVisible"  class="">
+    <app-cart></app-cart>
+  </div>
+</div>

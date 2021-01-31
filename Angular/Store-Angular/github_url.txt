@@ -1,0 +1,17 @@
+store-c067d
+nam5 (us-central)
+https://store-c067d.firebaseio.com/
+brayanrvh12@gmail.com
+
+
+apiKey: "AIzaSyCrZjtHC3deYourvC0LXunhdcLmWEP4CLc",
+    authDomain: "store-c067d.firebaseapp.com",
+    databaseURL: "https://store-c067d.firebaseio.com",
+    projectId: "store-c067d",
+    storageBucket: "store-c067d.appspot.com",
+    messagingSenderId: "877682564748",
+    appId: "1:877682564748:web:0e8b590698abca2a3ae5a9",
+    measurementId: "G-KE588PMRX7"
+
+
+																																																																								

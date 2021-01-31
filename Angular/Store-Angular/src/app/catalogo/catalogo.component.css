@@ -1,0 +1,26 @@
+.catalogo-container{
+  background-color: white;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.search{
+  padding-right: 40px;
+}
+.btn{
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+  font-size: 0.8rem;
+  margin: 2px;
+}
+.cantidad{
+  text-align: right;
+}
+.card{
+  margin: 10px!important;
+
+}
+.card-image img{
+  max-height: 100px !important;
+  width: auto;
+
+}

@@ -6,7 +6,7 @@ texto = archivo.read()
 archivo.close()
 # obtener linea por linea del archivo
 lineas = texto.splitlines()
-# crear la variable que almacenará la suma 
+# crear la variable que almacenará la suma
 total = 0
 # recorrer ese listado y guardarlo en una variable linea
 for linea in lineas:
@@ -16,7 +16,7 @@ for linea in lineas:
     # imprimir las posiciones correspondientes
     string = data[1].replace(']','').replace('[','')
     elem = string.replace('"','').split(",")
-    
+
     total += int(elem[0]) * int(elem[1])
 # mostrar el total
 print(lineas , "\n")
