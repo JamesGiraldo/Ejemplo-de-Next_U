@@ -3,28 +3,45 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>localStorage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	</head>
 	<body>
-			<div class="">
-				<label for="paises">Seleccione ultímo país visitado </label>
-				<select name="paises" id="listaPaises">
-					<option value="">Seleccione</option>
-					<option value="México">México</option>
-					<option value="Colombia">Colombia</option>
-					<option value="Brasil">Brasil</option>
-				</select>
-				<input type="submit" value="Visitar" onclick="guardarPais()"><br>
-				<p>El ultimo país visitado es: <span id="ultimoPaisVisitado" style="color: red;"> ... </span> </p>
+			<div class="container-fluid">
+				<div class="mt-3">
+					<div class="row">
+						<h1 class="text-center mb-5">Seleccionar datos del LocalStorage</h1>
+						<div class="col-6">
+							<select class="form-select" id="listaPaises" aria-label="Default select example">
+								<option value="" selected>Seleccione</option>
+								<option value="México">México</option>
+								<option value="Colombia">Colombia</option>
+								<option value="Brasil">Brasil</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<input type="submit" value="Visitar" class="btn btn-outline-info" onclick="guardarPais()"><br>
+						</div>
+					</div>
+					<div class="float-left mt-3">
+						<p>El ultimo país visitado es: <span class="badge rounded-pill bg-info text-dark" id="ultimoPaisVisitado"> ? </span> </p>
+					</div>
+				</div>
 			</div>
+			
+			<!-- JavaScript Bundle with Popper -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 			<script type="text/javascript">
 				function guardarPais() {
 					var pais = document.getElementById('listaPaises').value
 					localStorage.setItem('Ultimo-pais-visitado', pais); // para guardar
+					// una ves se guarda el valor
+					// llamo la función que lo muestra con el fin de que cuando lo guarde inmediatamente lo muestre :D
 					mostrarPaís()
 				}
 
 				function mostrarPaís() {
-					var paisObt = localStorage.getItem('Ultimo-pais-visitado')
+					var paisObt = localStorage.getItem('Ultimo-pais-visitado') // para llamar el dato guardado
 					document.getElementById("ultimoPaisVisitado").innerHTML = paisObt
 				}
 			</script>
