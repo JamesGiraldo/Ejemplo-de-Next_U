@@ -1,0 +1,42 @@
+<% flash.get('mensaje').forEach(function(mensaje){ %>
+    <div class="col-10 col-sm-8 col-md-4 m-auto alert alert-warning text-center" role="alert">
+    <%=mensaje%>
+    </div>
+<% }) %>
+
+  <div class="container-fluid text-center my-5">
+    <h2>Nuestras 10 mas vendidas</h2>
+  </div>  
+  
+  <div class="container-fluid  ">
+  
+      <div class="row  ">
+  
+        <%for(var sec= 0; fotos.length > sec  ;sec ++){ %>
+  
+          <div class="col-12 col-sm-10 col-md-7  mx-auto my-3">
+            <div class="col-12 col-sm-9 col-md-7 m-auto card  p-0 border-top-0" >
+                <div class="card-header p-0">
+                  <img class="img-fluid w-100" style="max-height:300px ;" src="./images/<%= fotos[sec].url%>" alt="">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title text-center"><%= fotos[sec].titulo%></h4>
+                  <p class="card-text text-center">
+                      <%=sec+1%>
+                  </p>
+                </div>
+  
+                  <div class="card-footer text-center">
+                    <a class="btn btn-light btn-sm m-auto" href="/agregar_carrito?foto=<%=fotos[sec].id%>"><img src="./svg/Carrito.svg" style="width: 20px;height: 20px;" alt=""> +</a>
+                    <a class="btn btn-light btn-sm m-auto" href="/agregar_deseos?foto=<%=fotos[sec].id%>"><img src="./svg/deseos.png" style="width: 20px;height: 20px;" alt=""> +</a>
+
+                  </div>
+
+              </div>
+          </div>
+  
+        <%}%>
+    
+      </div>
+  
+  </div>

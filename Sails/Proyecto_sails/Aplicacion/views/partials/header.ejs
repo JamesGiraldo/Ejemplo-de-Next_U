@@ -1,0 +1,105 @@
+
+
+<nav class="navbar navbar-expand-lg bg-warning navbar-light">
+    
+        <h4 class="d-5 d-md-3 m-auto"><img class="m-auto" src="../svg/Camara.svg" style="width: 75px;height: 55px;  pointer-events: none;" alt="">Tu_foto</h4>
+        <a  class="navbar-toggler" data-toggle="collapse" data-target="#Menu" ><span class="navbar-toggler-icon" ></span></a>
+
+        <div class="text-center collapse navbar-collapse" id="Menu">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                
+                <div class="nav-item  dropdown  my-1 m-sm-auto ">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="desp">Paginas</a>
+                    
+                    <div class="dropdown-menu" aria-labelledby="desp">
+                        <a class="dropdown-item" href="/top_vendidas">Top vendidas</a>
+                        <div class="dropdown-divider p-0 m-0"></div>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#contacto" >Acerca De</a>
+                    </div>
+                    <div class="modal" role="dialog" id="contacto">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-none border-0">
+                                        <h3 class="modal-title ">Acerca de</h3>
+                                        <button class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Mi nombre es kevin , soy estudiante de desarrollo web</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+
+
+                </div>
+
+                <%if(session.admin){%>
+                    <div class="nav-item  dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="admin">Admin</a>
+                        
+                        <div class="dropdown-menu" aria-labelledby="admin">
+                            <a class="dropdown-item" href="/admin/">Inicio Admin</a>
+                            <a class="dropdown-item" href="/admin/clientes">Clientes</a>
+                            <a class="dropdown-item" href="/admin/admins">Administradores</a>
+                            <a class="dropdown-item" href="/admin/dashboard">Dashboard</a>
+                        </div>
+                    </div> 
+                <%}%>
+                
+        
+                <%  if(session && session.cliente){    %>
+                    <div class="nav-item col-auto  nav-item  my-1 m-lg-auto">
+                        <strong  class=" border-right-0 btn-sm m-auto"><%-session.cliente[0].nombre%></strong>
+                        |
+                        <a href="/cerrar_sesion" class=" border-left-0 btn-sm m-auto">Cerrar Sesion</a>
+                    </div>                        
+                <%}%>
+
+                <%  if(session && session.admin){    %>
+                    <div class="nav-item col-auto  my-1 m-lg-auto">
+                        <strong  class=" border-right-0 btn-sm m-auto"><%-session.admin[0].nombre%></strong>
+                        |
+                        <a href="/cerrar_sesion" class=" border-left-0 btn-sm m-auto">Cerrar Sesion</a>
+                    </div>                        
+                <%}%>
+
+
+                <%  if(session && session.carrito){    %>
+                    <div class="nav-item  col-auto  my-1 m-lg-auto ">
+
+                        <a href="/mis_ordenes" class="btn btn-light btn-sm ">Registro</a>
+
+
+                        <a class="btn btn-light btn-sm" href="/mi_carrito"><img src="../svg/Carrito.svg" style="width: 20px;height: 20px;" alt="">
+                            <%if(session.carrito.length == 0){%>
+                                0
+                            <%}else{%>
+                                <%- session.carrito.length%>
+                            <%}%>
+                        </a>
+
+                        <a class="btn btn-light btn-sm" href="/mi_deseos"><img src="../svg/deseos.png" style="width: 20px;height: 20px;margin-right: 5px;" alt="">
+                            <%if(session.deseos.length == 0){%>
+                                0
+                            <%}else{%>
+                                <%- session.deseos.length%>
+                            <%}%>
+                        </a>
+                    </div>
+                <%}%>
+
+                <div class=" m-auto p-0">
+                    <div class="nav-item  btn-group nav-item  my-1 my-lg-auto ml-lg-5 ">
+                        <a href="/registro" class=" btn btn-secondary border-0 btn-sm m-auto">Registrarse</a>
+                        <a href="/iniciar" class="  btn btn-danger border-0 btn-sm m-auto">Iniciar</a>
+
+
+                    </div>
+                </div>
+                
+            </ul>
+        </div>
+    
+</nav>

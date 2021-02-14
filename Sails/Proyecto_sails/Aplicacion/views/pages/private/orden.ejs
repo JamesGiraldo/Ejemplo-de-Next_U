@@ -1,0 +1,31 @@
+<div class="container-fluid pt-3">
+    <div class="row">
+
+        <div class="col-auto col-sm-8 m-auto">
+
+                <% if(orden.length > 0){%>
+                <h1 class="text-center ">Ordenes</h1>
+
+                <table class="table table-responsive-sm  table-bordered table-dark table-striped table-hover ">
+
+                        <tr>
+                            <th>Fotos</th>
+                            <th>Fecha</th>
+                        </tr>
+
+                        <% orden.forEach(function(mensaje){ %>
+                            <tr>
+                                <td><%=mensaje.cantidad%></td>
+                                <td><a href="/detalles/<%=mensaje.fecha%>"><%=mensaje.fecha%></a></td>
+                            </tr>
+                        <%})%>
+
+                </table>
+                <%}else{%>
+                    <h1 class="text-center">No hay registros</h1>
+                <%}%>
+        </div>
+
+    </div>
+
+</div>

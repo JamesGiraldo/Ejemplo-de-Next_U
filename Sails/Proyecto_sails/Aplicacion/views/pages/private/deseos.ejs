@@ -1,0 +1,57 @@
+<div class="container-fluid pt-3">
+    
+    <%flash.get("mensaje").forEach(function(men){%>
+        <div class="col-10 col-sm-8 col-md-4 m-auto">
+
+            <div class="alert alert-primary">
+                <%=men%>
+            </div>
+
+        </div>
+    <%})%>
+
+    <div class="row">
+
+        <div class="col-auto col-sm-8 m-auto">
+
+            <%if (session.deseos.length > 0){%>
+                <table class="table table-responsive-sm  table-bordered table-dark table-striped table-hover ">
+
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Foto</th>
+                        </tr>
+
+                        <%session.deseos.forEach(function(men){ %>
+                        <tr>
+                            <td >
+                                <div class="m-auto">
+                                    <%=men.foto.titulo%>
+                                </div>
+                            </td>
+                            <td >
+                                <div class="row m-auto p-0">
+                                    <div class="col-12 text-center p-0 m-auto">
+                                        <img src="/images/<%=men.foto.url%>" class=" card-header img-fluid p-1" style="max-width: 200px;" alt="">
+                                    </div>
+                                    <div class="col-12 text-center p-1 m-auto">
+                                        <a href="/eliminar_deseos?foto=<%=men.foto.id%>" class=" btn btn-outline-warning btn-sm ">Eliminar</a>
+                                    </div>
+                                    <div class="col-12 text-center p-1 m-auto">
+                                        <a href="/agregar_carrito?foto=<%=men.foto.id%>" class=" btn btn-outline-warning btn-sm ">Agregar Al carrito </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <%})%>
+
+                </table>
+
+            <%}else{%>
+                <h3 class="text-center">Su Lista de deseos esta vacia:(</h3>
+            <%}%>
+        </div>
+
+    </div>
+
+</div>

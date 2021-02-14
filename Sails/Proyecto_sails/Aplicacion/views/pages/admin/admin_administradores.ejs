@@ -1,0 +1,54 @@
+<div class="container-fluid pt-3">
+    
+    <%flash.get("mensaje").forEach(function(men){%>
+        <div class="col-10 col-sm-8 col-md-4 m-auto">
+
+            <div class="alert alert-primary">
+                <%=men%>
+            </div>
+
+        </div>
+    <%})%>
+
+    <div class="row">
+
+        <div class="col-auto col-sm-8 m-auto">
+
+            <%if (admin.length > 0){%>
+                <table class="table table-responsive-sm  table-bordered table-dark table-striped table-hover ">
+
+                        <tr>
+                            <th>Administradores</th>
+                            <th>Desactivar/activar</th>
+                        </tr>
+
+                        <%admin.forEach(function(men){ %>
+                        <tr>
+                            <td >
+                                <div class="m-auto">
+                                   <a href="/admin/ordenes_cliente?cliente=<%=men.id%>"> <%=men.nombre%> </a>
+                                </div>
+                            </td>
+                            <td >
+                                <div class="row m-auto p-0">
+                                    <div class="col-12 text-center p-1 m-auto">
+                                        <%if(men.estado === 'activa'){%>
+                                            <a href="/admin/desactivar_admin?admin=<%=men.id%>" class=" btn btn-outline-warning btn-sm ">Desactivar</a>
+                                        <%}else{%>
+                                            <a href="/admin/desactivar_admin?admin=<%=men.id%>" class=" btn btn-outline-warning btn-sm ">Activar</a>
+                                            <%}%>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <%})%>
+
+                </table>
+            <%}else{%>
+                <h3 class="text-center">No hay ningun administrador, no se como estas leyendo esto de ser asi :o </h3>
+            <%}%>
+        </div>
+
+    </div>
+
+</div>

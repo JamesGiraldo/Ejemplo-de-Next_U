@@ -1,0 +1,57 @@
+<div class="container-fluid pt-3">
+    
+    <%flash.get("mensaje").forEach(function(men){%>
+        <div class="col-10 col-sm-8 col-md-4 m-auto">
+
+            <div class="alert alert-primary">
+                <%=men%>
+            </div>
+
+        </div>
+    <%})%>
+
+    <div class="row">
+
+        <div class="col-auto col-sm-8 m-auto">
+
+                <table class="table table-responsive-sm  table-bordered table-dark table-striped table-hover ">
+
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Foto</th>
+                        </tr>
+
+                        <%session.admin_carrito.forEach(function(men){ %>
+                        <tr>
+                            <td >
+                                <div class="m-auto">
+                                    <%=men.titulo%>
+                                </div>
+                            </td>
+                            <td >
+                                <div class="row m-auto p-0">
+                                    <div class="col-12 text-center p-0 m-auto">
+                                        <img src="/images/<%=men.url%>" class=" card-header img-fluid p-1" style="max-width: 200px;" alt="">
+                                    </div>
+                                    <div class="col-12 text-center p-1 m-auto">
+                                        <%if(men.estado == "activa"){%>
+                                        <a href="/admin/desabilitar_foto?foto=<%=men.id%>" class=" btn btn-outline-warning btn-sm ">Desabilitar</a>
+                                        <%}else{%>
+                                        <a href="/admin/desabilitar_foto?foto=<%=men.id%>" class=" btn btn-outline-warning btn-sm ">Habilitar</a>
+                                        <%}%>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <%})%>
+
+                </table>
+                    <div class="row p-2">
+                        <a href="/admin/agregar_foto" class="col-auto btn m-auto  btn-dark bg-dark">Agregar</a>
+                    </div>
+
+        </div>
+
+    </div>
+
+</div>

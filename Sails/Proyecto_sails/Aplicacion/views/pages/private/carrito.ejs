@@ -1,0 +1,56 @@
+<div class="container-fluid pt-3">
+    
+    <%flash.get("mensaje").forEach(function(men){%>
+        <div class="col-10 col-sm-8 col-md-4 m-auto">
+
+            <div class="alert alert-primary">
+                <%=men%>
+            </div>
+
+        </div>
+    <%})%>
+
+    <div class="row">
+
+        <div class="col-auto col-sm-8 m-auto">
+
+            <%if (session.carrito.length > 0){%>
+                <table class="table table-responsive-sm  table-bordered table-dark table-striped table-hover ">
+
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Foto</th>
+                        </tr>
+
+                        <%session.carrito.forEach(function(men){ %>
+                        <tr>
+                            <td >
+                                <div class="m-auto">
+                                    <%=men.foto.titulo%>
+                                </div>
+                            </td>
+                            <td >
+                                <div class="row m-auto p-0">
+                                    <div class="col-12 text-center p-0 m-auto">
+                                        <img src="/images/<%=men.foto.url%>" class=" card-header img-fluid p-1" style="max-width: 200px;" alt="">
+                                    </div>
+                                    <div class="col-12 text-center p-1 m-auto">
+                                        <a href="/eliminar_foto?foto=<%=men.foto.id%>" class=" btn btn-outline-warning btn-sm ">Eliminar</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <%})%>
+
+                </table>
+                    <div class="row p-2">
+                        <a href="/comprar" class="col-auto btn m-auto  btn-dark bg-dark">Comprar </a>
+                    </div>
+            <%}else{%>
+                <h3 class="text-center">Su Carrito esta vacio :(</h3>
+            <%}%>
+        </div>
+
+    </div>
+
+</div>

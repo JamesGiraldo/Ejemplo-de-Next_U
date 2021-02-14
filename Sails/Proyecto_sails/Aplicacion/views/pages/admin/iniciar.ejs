@@ -1,0 +1,34 @@
+<div class="row m-auto  ">
+    <div class="col-12 col-sm-8 col-md-5 my-5 mx-auto ">
+      <form action="/admin/procesar_iniciar" class="bg-light border border-primary border-rounded-sm p-3 p-sm-5" method="POST">
+        <h2 class="text-center mt-2">Iniciar Admin</h2>
+  
+        <% flash.get('error').forEach(function(mensaje){%>
+          <div class="alert alert-secondary" role="alert"> 
+             <%=mensaje%> 
+          </div> 
+        <%  }) %>
+  
+  
+  
+        <div class="form-group m-auto ">
+            <label for="email" class="form-inline">Email</label>
+            <input type="email" name="email" class="form-control"  placeholder="Micorreo@gmail.com">
+  
+        </div>
+  
+        <div class="form-group m-auto ">
+          <label for="contrasena" class="form-inline" >Contraseña</label>
+          <input type="password" class="form-control" name="contrasena" id="">
+  
+        </div>
+  
+        <div class=" form-group mt-5 text-center ">
+          <input type="submit" class=" btn btn-primary m-auto" value="Ingresar">
+        </div>
+  
+      </form>
+    </div>
+  </div>
+  
+  
