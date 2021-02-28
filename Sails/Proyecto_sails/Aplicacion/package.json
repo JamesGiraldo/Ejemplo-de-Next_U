@@ -32,9 +32,9 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kevin/aplicacion.git"
+    "url": ""
   },
-  "author": "kevin",
+  "author": "james Giraldo",
   "license": "",
   "engines": {
     "node": "^10.19"

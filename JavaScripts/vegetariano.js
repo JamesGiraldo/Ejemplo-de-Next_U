@@ -1,3 +1,24 @@
+// Se declaran las variables de tipo arreglo [ ]
+var vegetarianos =["sopa de verduras","fideos salteados","lasagna verde"];
+var noVegetarianos = ["sopa de pollo","hamburguesa con papas","bife chorizo"];
+
+// Variables booleanas
+var tipoDeMenu = false
+/*var tipoDeMenu = true;*/
+function menu(tipoDeMenu){
+    // validamos el tipo de menú si es verdadero imprime tal menú
+    if( tipoDeMenu === true ){
+        console.log(`menus vegetarianos: ${vegetarianos[0]}, ${vegetarianos[1]}, ${vegetarianos[2]}`)
+    // si el tipo de menú es falso imprime este menú
+    } else {
+        console.log(`menus no vegetarianos ${noVegetarianos[0]}, ${noVegetarianos[1]}, ${noVegetarianos[2]} `)
+    }
+}
+// se llama la función
+menu(true);
+
+/////////////===================================================/////////////
+
 var Veg=["Lechuga","Cebolla"] //Recetas Vegetarianas
 var noVeg=["Carne","Pollo"] //Recetas No Vegetarianas
 var tipoVeg=true //Variable si es de tipo vegetariano

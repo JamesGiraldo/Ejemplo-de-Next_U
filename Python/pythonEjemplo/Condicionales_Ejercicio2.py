@@ -1,7 +1,9 @@
 moneda1=input("Ingrese el nombre de la primera moneda: ")
 cant1=float(input("Ingresa la cantidad de "+moneda1+":"))
+
 moneda2=input("Ingrese el nombre de la segunda moneda: ")
 cant2=float(input("Ingresa la cantidad de "+moneda2+":"))
+
 moneda3=input("Ingrese el nombre de la tercera moneda: ")
 cant3=float(input("Ingresa la cantidad de "+moneda3+":"))
 
