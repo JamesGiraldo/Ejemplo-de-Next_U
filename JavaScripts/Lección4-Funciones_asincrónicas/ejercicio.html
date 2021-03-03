@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+	    <style>
+	        #errores {
+	            color: red;
+	            background: black;
+	        }
+	    </style>
+	</head>
+	<body>
+	    <form action="">
+	        <label for="nombre">Nombre:</label>
+	        <input type="text" name="nombre" id="nombre" onkeyup="validarNombre()"><span id="errores"></span>
+	    </form>
+	    <script>
+	        var palabra = document.getElementById('nombre');
+	        var error = document.getElementById('errores');
+	        function validarNombre() {
+	            var letters = /^[a-zA-Z ]+$/g;
+	            if (letters.test(palabra.value) == false && palabra.value.length>0) {
+	                error.innerHTML = ' Solo debe existir Texto';
+	            } else {
+	                if (palabra.value.length < 3) {
+	                	if(palabra.value.length==0){
+	                     error.innerHTML = ' No debe estar vacio';
+	                    }else{
+	                    error.innerHTML = ' Debe contener mas de dos caracteres';}
+	                } else {
+	                    error.innerHTML = '';
+	                }
+	            }
+	        }
+	    </script>
+			<!-- en caso tal de usar el cigo aparte, importar así -->
+			<!-- <script src="ejercicio.js"></script> -->
+	</body>
+</html>
