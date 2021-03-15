@@ -1,0 +1,24 @@
+{
+  "name": "nextufoundationsolucion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "foundation-cli": "^2.2.6",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.5.1",
+    "what-input": "^5.2.10"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  }
+}

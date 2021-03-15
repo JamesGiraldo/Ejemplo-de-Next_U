@@ -1,3 +1,4 @@
 BTC:MONEDA BTC
 BTA:Ahí
 OK:bien
+HOLA :1000

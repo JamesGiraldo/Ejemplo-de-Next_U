@@ -2,6 +2,7 @@ criptos = ["BTC","BCC","LTC","ETH","ETC","XRP"]
 i=0
 total=0
 while (i < 3):
+    print("Introduzca una de estas opciones: BTC, BCC, LTC, ETH, ETC, XRP.")
     cripto = input("Ingrese el nombre de la moneda: ")
     if cripto in criptos:
         i=i+1
@@ -15,5 +16,5 @@ while (i < 3):
             else:
                 total = total + float(cant) * float(cotiz)
     else:
-        print("Moneda invalida.")
+        print("Error, criptomoneca desconocida Introduzca una de estas opciones: BTC, BCC, LTC, ETH, ETC, XRP.")
 print("El tota en USD que tiene el usuario es de ",str(total))

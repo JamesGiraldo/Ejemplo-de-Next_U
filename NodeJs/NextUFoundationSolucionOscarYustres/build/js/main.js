@@ -1,1 +1,0 @@
-jQuery,alert("Hola mundo");
