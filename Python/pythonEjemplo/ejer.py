@@ -22,6 +22,6 @@ valor=0.0
 # esto es para hacer un recorrido de que miesntras i sea menor a 5 va a recorrer 5 veces la función definida arriba
 while i < 2:
  valor = valor + capturar_moneda()
- i=1+1
+ i=i+1
  # imprime el resultado
- print("Usted tiene " + str(valor) + " Dólares Americanos")
+print("Usted tiene " + str(valor) + " Dólares Americanos")
