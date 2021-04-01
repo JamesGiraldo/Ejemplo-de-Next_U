@@ -1,9 +1,0 @@
-curl -X POST --header "Content-Type: application/json" -d "{\"email\":\"eduardo@email.com\",\"contrasena\":\"lalito\",\"seudonimo\":\"vallejo\"}" http://localhost:8080/api/v1/autores
-curl -X DELETE "http://localhost:8080/api/v1/publicaciones/5?email=luis@email.com&contrasena=123123"
-curl -X DELETE "http://localhost:8080/api/v1/publicaciones/6?email=luis@email.com&contrasena=123123"
-curl -X DELETE "http://localhost:8080/api/v1/publicaciones/6?email=ana@email.com&contrasena=123123"
-curl -X DELETE "http://localhost:8080/api/v1/publicaciones/6?email=luis@email.com&contrasena=123123"
-curl -X POST --header "Content-Type: application/json" -d "{\"titulo\":\"Peru\",\"resumen\":\"Buen viaje a Peru\",\"contenido\":\"Contenido\"}" "http://localhost:8080/api/v1/publicaciones?email=aldo@email.com&contrasena=121212"
-curl -X DELETE "http://localhost:8080/api/v1/publicaciones/8?email=aldo@email.com&contrasena=121212"
-
-

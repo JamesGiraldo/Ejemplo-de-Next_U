@@ -1,18 +1,18 @@
 {
-  "name": "p16",
-  "version": "1.0.0",
-  "description": "Prueba 16",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon aplicacion.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Aldo Borrero Rojas",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.2"
-  }
+    "name": "nodejs_andres_arcela",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webapp.js",
+    "scripts": {
+        "dev": "nodemon webapp.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "mysql": "^2.18.1",
+        "nodemon": "^2.0.2"
+    }
 }

@@ -1,18 +1,22 @@
 /** selector de identificadores en el html elemento(id="nombre") */
-var nombre = document.getElementById('nombre');
+var palabra = document.getElementById('nombre');
 /** selector de identificadores en el html elemento(id="error") */
-var error = document.getElementById("error");
-/** Expresión regular */
-var expresion = /^[A-z]{0,9}$/;
-
-/** Función para Validar form  */
-function valido(e){
-  /** Variable que contine el error por eso se declara primero vacia para poder usarla en la condición e imprimir texto despues */
-  error.innerText = ""
-  /** condición */
-  if( !expresion.test( nombre.value ) ){
-    error.innerText = "información incorrecta";
-  }
+var error = document.getElementById('errores');
+/** Función que se encarga de validar el campo nombre */
+function validarNombre() {
+    /** Expresión regular */
+    var letters = /^[a-zA-Z ]+$/g;
+    /** condición */
+    if (letters.test(palabra.value) == false && palabra.value.length>0) {
+        error.innerHTML = ' Solo debe existir Texto ';
+    } else {
+        if (palabra.value.length < 3) {
+          if(palabra.value.length==0){
+             error.innerHTML = ' No debe estar vacio';
+            }else{
+            error.innerHTML = ' Debe contener mas de dos caracteres';}
+        } else {
+            error.innerHTML = '';
+        }
+    }
 }
-/** selector de id="nombre" se le agrega el evento keypress junto la función valido */
-document.getElementById('nombre').addEventListener('keypress', valido);
