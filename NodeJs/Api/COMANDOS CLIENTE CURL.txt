@@ -1,0 +1,5 @@
+curl -X POST http://localhost:8080/api/v1/autores/ -H "Content-type: application/json" -d "{\"email\":\"pedro@email.com\",\"contrasena\":\"123456\",\"pseudonimo\":\"pedro123\"}"
+
+curl -X POST http://localhost:8080/api/v1/publicaciones/?email=luis@email.com^&contrasena=luis123 -H "Content-type: application/json" -d "{\"titulo\":\"MEXICO\",\"resumen\":\"viaje a mexico\",\"contenido\":\"excelente viaje\"}"
+
+curl -X DELETE http://localhost:8080/api/v1/publicaciones/30/?email=luis@email.com^&contrasena=luis123

@@ -13,34 +13,38 @@
 <body>
     <%- include ('../views/partials/encabezado_publico') %>
 
-    <div class="container">
-        <img src="images/fondo.jpg" width="100%">
-        <h1>Inicio</h1>
-        <p>Aqui nuestras ultimas publicaciones:</p>
+        <div class="container">
+            <img src="images/fondo.jpg" width="100%">
+            <h1>Inicio</h1>
+            <p>Aqui nuestras ultimas publicaciones:</p>
 
-        <div class="row">
-            <% publicaciones.forEach(publicacion =>{ %>
-            <div class="col-sm-12">
-                <div class="card fluid">
-                    <h3 class="section"><a href="#"><%=publicacion.titulo%></a>
-                    <mark class="tag"><%=publicacion.votos%></mark></h3>
-                    <h6 class="section dark"> <span class="icon-user"></span>
-                        <%=publicacion.pseudonimo%> -
-                        <span class="icon-calendar"></span>
-                        <%=publicacion.fecha_hora.getFullYear()%>/
-                        <%=publicacion.fecha_hora.getMonth()+1%>/
-                        <%=publicacion.fecha_hora.getDate()%>
-                     </h6>
-                     <p>
-                        <%=publicacion.resumen%>
-                     </p>
-                </div>
+            <div class="row">
+                <% publicaciones.forEach(publicacion =>{ %>
+                    <div class="col-sm-12">
+                        <div class="card fluid">
+                            <h3 class="section">
+                                <a href="#">
+                                    <%=publicacion.titulo%>
+                                </a>
+                                <mark class="tag"><%=publicacion.votos%></mark></h3>
+                            <h6 class="section dark"> <span class="icon-user"></span>
+                                <%=publicacion.pseudonimo%> -
+                                    <span class="icon-calendar"></span>
+                                    <%=publicacion.fecha_hora.getFullYear()%>/
+                                        <%=publicacion.fecha_hora.getMonth()+1%>/
+                                            <%=publicacion.fecha_hora.getDate()%>
+                            </h6>
+                            <p>
+                                <%=publicacion.resumen%>
+                            </p>
+                        </div>
+                    </div>
+                    <% }) %>
             </div>
-            <% }) %>
         </div>
-    </div>
 
-    <%- include ('../views/partials/pie')%>
-    <script src="javascripts/script.js"></script>
+        <%- include ('../views/partials/pie')%>
+            <script src="javascripts/script.js"></script>
 </body>
+
 </html>

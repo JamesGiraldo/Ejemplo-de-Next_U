@@ -23,9 +23,9 @@ aplicacion.get('/api/v1/publicaciones/', function(peticion, respuesta) {
         if (busqueda == "") {
             query = `SELECT * FROM publicaciones`
         } else {
-            query = ` SELECT * FROM publicaciones WHERE 
-        titulo LIKE '%${busqueda}%' OR 
-        resumen LIKE '%${busqueda}%' OR 
+            query = ` SELECT * FROM publicaciones WHERE
+        titulo LIKE '%${busqueda}%' OR
+        resumen LIKE '%${busqueda}%' OR
         contenido LIKE '%${busqueda}%'
         `
         }
@@ -164,7 +164,7 @@ aplicacion.post('/api/v1/publicaciones/', function(peticion, respuesta) {
     console.log(email, contrasena,titulo, resumen, contenido);
 
     pool.getConnection((err, connection) => {
-     
+
         const date = new Date()
         const fecha = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
         const consultaUsserPass = `
