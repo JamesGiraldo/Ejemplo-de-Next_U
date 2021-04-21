@@ -1,0 +1,42 @@
+/*Este archivo CSS contiene algunos estilos para botones y texto, la animación del logo
+  y quita la decoración de los enlaces. Además permite importar los íconos de Bootstrap
+  para el footer.
+  
+  Se añadió también un estilo para los radio buttons y checkbox de los formularios al momento de ser seleccionados*/
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
+.bold{
+    font-weight: bold;
+}
+.navbar-brand{
+    font-size: 2em;
+}
+#logo:hover{
+    animation-name: vibrar;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+}
+.list-group-item{
+    font-weight: lighter;
+}
+.contacto-link{
+    text-decoration: none;
+}
+
+.custom-color:checked{
+    border-color: white;
+    background-color: #FFB74D;
+}
+
+.error{
+    color: #FFB74D;
+    font-weight: bolder;
+    visibility: hidden;
+}
+
+@keyframes vibrar{
+    0%{transform:rotateZ(-7deg);}
+    50%{transform:rotateZ(-0deg);}
+    100%{transform:rotateZ(7deg);}
+}

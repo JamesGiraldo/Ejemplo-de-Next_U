@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="./bootstrap-5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Oye! Música Gratis</title>
+    <link rel="shortcut icon" href="./imagenes/logo.png">
+
+  </head>
+  <body>
+       
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bold">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary" href="./index.html">
+          <img id='logo' src="./imagenes/logo.png" alt="logo de Oye!">
+          Oye!
+        </a>
+        <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="justify-content-between collapse navbar-collapse" id='menu'>
+            <ul class="navbar-nav flex-column text-center flex-lg-row">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./songs.html" class="nav-link">Canciones</a>
+              </li>
+            </ul>
+            <ul class='navbar-nav text-center'>
+              <li class='nav-item p-2'>
+                <button type="button" class="btn btn-primary bold" data-bs-toggle='modal' data-bs-target='#contacto'>Contacto</button>
+                <div class="modal fade" tabindex="-1" role="dialog" id="contacto" aria-labelledby="contacto-label" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content text-dark">
+                      <div class="modal-header">
+                        <h5 class="modal-title bold" id="contacto-label">Contáctanos</h5>
+                        <button class="btn btn-secondary btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex flex-wrap justify-content-around"><a class='contacto-link btn btn-outline-primary' href="tel:+123 456 789 1234">Llamar</a>
+                            <span>+123 456 789 1234</span></li>
+                          <li class="list-group-item d-flex flex-wrap justify-content-around"><a class='contacto-link btn btn-outline-primary' href = "mailto:info@oye.com">Enviar correo</a>
+                          <span>info@oye.com</span></li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-secondary bold" data-bs-dismiss='modal'>Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </li>
+              <li class="nav-item p-2">
+                <a href="./login.html" class="btn btn-outline-primary bold">Iniciar sesión</a>
+              </li>
+              <li class="nav-item p-2">
+                <a href="./signup.html" class="btn btn-outline-primary bold">Registrarse</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid m-auto py-5 row bg-primary">
+      <div class="col-12 col-md-6 m-auto text-center">
+        <h1 class='display-5 bold'>Canciones gratis para la comunidad</h1>
+        <p class="lead">
+        Con este sitio podrás escuchar audios de manera libre...</p>
+        <p>
+          Dale click al botón para escuchar las canciones más populares
+        </p>
+        <a href="#canciones" class="btn btn-secondary bold" role="button">Ver canciones</a>
+      </div>
+      <div class='col-12 col-md-6'>
+        <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner h-50">
+            <div class="carousel-item active" data-bs-interval='2500'>
+              <img src="./imagenes/portada_1.png" class="img-fluid" alt="chica relax con música">
+            </div>
+            <div class="carousel-item" data-bs-interval='2500'>
+              <img src="./imagenes/portada_2.png" class="img-fluid" alt="chicos bailando">
+            </div>
+            <div class="carousel-item" data-bs-interval='2500'>
+              <img src="./imagenes/portada_3.png" class="img-fluid" alt="celular con música">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid m-auto py-5 row bg-light" id='canciones'>
+      <div class="col bg-light card">
+        <table class="table table-light table-borderless table-hover text-md-center m-auto">
+          <thead>
+            <tr>
+              <th colspan='2'><h2 class="bold text-primary">Top 3</h2></th>
+            </tr>
+            <tr>
+              <th class="d-none d-md-table-cell w-50">Nombre</th>
+              <th class="w-50">Canción</th>
+            </tr>
+          </thead>
+          <tbody id='top3'>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class='container-fluid text-center text-light pt-3' id='redes'>
+      <div class="row pb-2">
+        <div class="col-12 col-lg">
+         <a class="btn btn-primary" target='_blank' href="https://www.linkedin.com/in/bryan-silva-9496261b2/"><i class="bi bi-linkedin"></i></a>
+         <a class="btn btn-secondary" target='_blank' href="https://www.youtube.com/channel/UCbZb4zU1k1YVisG8GxNFStw"><i class="bi bi-youtube"></i></a>
+         <a class="btn btn-primary" target='_blank' href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+         <a class="btn btn-secondary" target='_blank' href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+         <a class="btn btn-primary" target='_blank' href="https://codepen.io/bryan-silva/pens/public"><i class="bi bi-code"></i></a>
+        </div>
+        <div class="col-12 col-lg">
+          <p class="pt-4 pt-lg-0">&copy rmsTech - Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+    <!--jQuery para el filtrado de canciones mediante AJAX-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript include Popper -->
+    <script src='./bootstrap-5.0.0-beta3/dist/js/bootstrap.bundle.min.js'></script>
+    <script src="./js/top.js"></script>
+  </body>
+</html>
