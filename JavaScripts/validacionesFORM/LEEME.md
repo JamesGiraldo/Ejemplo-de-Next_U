@@ -2,7 +2,7 @@
 
 La validación de formularios es algo muy común en la web.
 
-## Creación de los contenedores span para mostrar los errores 
+## Creación de los contenedores span para mostrar los errores
 
 Se crea un `span` para cada caso y se coloca en el lugar que corresponda en el HTML
 
@@ -10,7 +10,7 @@ Se crea un `span` para cada caso y se coloca en el lugar que corresponda en el H
 <!DOCTYPE html>
 <html lang="en">
 ...
-  <form action="" >
+  <form action="">
     <p>
       <label>Nombre</label>
       <input type="text" name="nombre" id="nombre">
@@ -21,14 +21,15 @@ Se crea un `span` para cada caso y se coloca en el lugar que corresponda en el H
     ...<span id="errorEmail" class="error"></span>
     
     ...<span id="errorContrasena" class="error"></span>
-    
+
     ...<span id="errorConfirmacion" class="error"></span>
-    
+
     ...<span id="errorGenero" class="error"></span>
 
     ...<span id="errorPais" class="error"></span>
-    
+
     ...<span id="errorTerminos" class="error"></span>
+  </form>
 ...
 </html>
 ```
@@ -105,7 +106,7 @@ if (formulario.contrasena.value != formulario.confirmacion.value) {
 }
 ```
 
-### Género 
+### Género
 
 ```javascript
 if (formulario.genero.value == "") {
