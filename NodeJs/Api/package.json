@@ -1,10 +1,10 @@
 {
-    "name": "nodejs_andres_arcela",
+    "name": "James Giraldo",
     "version": "1.0.0",
     "description": "",
     "main": "webapp.js",
     "scripts": {
-        "dev": "nodemon webapp.js",
+        "start": "nodemon webapp.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -13,6 +13,6 @@
         "body-parser": "^1.19.0",
         "express": "^4.17.1",
         "mysql": "^2.18.1",
-        "nodemon": "^2.0.2"
+        "nodemon": "^2.0.7"
     }
 }

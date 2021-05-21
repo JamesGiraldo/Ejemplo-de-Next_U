@@ -17,3 +17,21 @@ var mensaje = `Club de ${deporte.nombre} ${deporte.clubes.dojo[1]} Ciudad: ${dep
 // se imprime la variable
 console.log(` "${mensaje}" `);
 // resultad de variable mensaje:  "Club de judo Sensei Sata Ciudad: Tokio"
+
+
+/** Otro ejemplo */
+
+var deporte = {
+    nombre: 'Judo',
+    origen: 'Japón',
+  club: {
+    dojo:['Sensei VU','Sensei Sato'],
+    ciudad: ['Inmaculada','Tokio']
+  }
+}
+
+function nombre( nombreDeporte, ciudad , club  ){
+    return console.log( ` Clud de ${ nombreDeporte } ${ club } Ciudad:  ${ ciudad }`)
+}
+
+nombre( deporte.nombre , deporte.club.dojo[0] , deporte.club.ciudad[1] );
