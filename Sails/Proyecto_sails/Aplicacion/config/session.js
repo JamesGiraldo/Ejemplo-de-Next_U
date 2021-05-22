@@ -18,7 +18,7 @@ module.exports.session = {
   * of your users, forcing them to log in again.                             *
   *                                                                          *
   ***************************************************************************/
-  secret: '7a5a078c3c023fe354b5fdf960cf1d98',
+  // secret: '7a5a078c3c023fe354b5fdf960cf1d98',
 
 
   /***************************************************************************
@@ -35,5 +35,7 @@ module.exports.session = {
   // isSessionDisabled: function (req){
   //   return !!req.path.match(req._sails.LOOKS_LIKE_ASSET_RX);
   // },
+
+  secret: 'extremely-secure-keyboard-cat' 
 
 };
