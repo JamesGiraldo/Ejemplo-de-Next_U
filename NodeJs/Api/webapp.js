@@ -26,14 +26,14 @@ aplicacion.get('/api/v1/publicaciones', function(peticion, respuesta) {
         }
         connection.query(query, function(error, filas) {
             if (filas.length > 0) {
-                respuesta.json({ 
+                respuesta.json({
                     ok: true,
-                    data: filas 
+                    data: filas
                 })
             } else {
-                respuesta.status(404).send({ 
+                respuesta.status(404).send({
                     ok: false,
-                    errors: ["No se encuentra esa publicacion"] 
+                    errors: ["No se encuentra esa publicacion"]
                 })
             }
         })
@@ -49,14 +49,14 @@ aplicacion.get('/api/v1/publicaciones/:id', function(peticion, respuesta) {
         const query = `SELECT * FROM publicaciones WHERE id=${connection.escape( id )}`
         connection.query(query, function(error, filas) {
             if (filas.length > 0) {
-                respuesta.json({ 
+                respuesta.json({
                     ok: true,
-                    data: filas[0] 
+                    data: filas[0]
                 })
             } else {
-                respuesta.status(404).send({ 
+                respuesta.status(404).send({
                     ok: false,
-                    errors: ["No se encuentra esa publicacion"] 
+                    errors: ["No se encuentra esa publicacion"]
                 })
             }
         })
@@ -70,9 +70,9 @@ aplicacion.get('/api/v1/autores', function(peticion, respuesta) {
 
         const query = `SELECT * FROM autores`
         connection.query(query, function(error, filas) {
-            respuesta.json({ 
+            respuesta.json({
                 ok: true,
-                data: filas 
+                data: filas
             })
         })
         connection.release()
@@ -87,14 +87,14 @@ aplicacion.get('/api/v1/autores/:id', function(peticion, respuesta) {
         const query = `SELECT * FROM autores INNER JOIN publicaciones ON autores.id = publicaciones.autor_id Where autores.id = ${connection.escape( id )}`
         connection.query(query, function(error, filas) {
             if (filas.length > 0) {
-                respuesta.json({ 
+                respuesta.json({
                     ok: true,
-                    data: filas 
+                    data: filas
                 })
             } else {
-                respuesta.status(404).send({ 
+                respuesta.status(404).send({
                     ok: false,
-                    errors: ["No se encuentra ese autor"] 
+                    errors: ["No se encuentra ese autor"]
                 })
             }
         })
@@ -111,30 +111,30 @@ aplicacion.post('/api/v1/autores', function(peticion, respuesta) {
         const consultaEmail = `SELECT *  FROM autores WHERE email = ${connection.escape(email)} `;
         connection.query(consultaEmail, (error, filas) => {
             if (filas.length > 0) {
-                respuesta.status(404).send({ 
-                    ok: false, 
-                    errors: ["Email duplicado"] 
+                respuesta.status(404).send({
+                    ok: false,
+                    errors: ["Email duplicado"]
                 })
             } else {
                 const consultaPseudonimo = `SELECT * FROM autores WHERE pseudonimo = ${connection.escape(pseudonimo)} `
                 connection.query(consultaPseudonimo, (error, filas) => {
                     if (filas.length > 0) {
-                        respuesta.status(404).send({ 
+                        respuesta.status(404).send({
                             ok: false,
-                            errors: ["psudonimo duplicado"] 
+                            errors: ["psudonimo duplicado"]
                         })
                     } else {
                         const consulta = `INSERT INTO autores (email, contraseña, pseudonimo) VALUES (
                                         ${connection.escape(email)},
                                         ${connection.escape(contrasena)},
-                                        ${connection.escape(pseudonimo)} )`;                                  
+                                        ${connection.escape(pseudonimo)} )`;
                         connection.query(consulta, (error, filas) => {
                             const nuevoId = filas.insertId
                             const queryConsulta = `SELECT * FROM autores WHERE id=${connection.escape(nuevoId)}`
                             connection.query(queryConsulta, function(error, filas) {
-                                respuesta.status(200).json({ 
-                                    ok: true, 
-                                    data: filas[0] 
+                                respuesta.status(200).json({
+                                    ok: true,
+                                    data: filas[0]
                                 })
                             })
                         })
@@ -186,7 +186,7 @@ aplicacion.post('/api/v1/publicaciones', function(peticion, respuesta) {
                     const queryConsulta = `SELECT * FROM publicaciones WHERE id=${ connection.escape(nuevoId) }`
                     connection.query(queryConsulta, function(error, filas) {
                         /** en caso tal de que los datos del query sean correctos, tanto email como contraseña responder con los datos insertados */
-                        respuesta.status(200).json({ 
+                        respuesta.status(200).json({
                             ok: true,
                             data: filas[0]
                         })
@@ -194,9 +194,9 @@ aplicacion.post('/api/v1/publicaciones', function(peticion, respuesta) {
                 })
             } else {
                 /** en caso tal de que los datos del query sean incorrectos, tanto email como contraseña */
-                respuesta.status(404).send({ 
+                respuesta.status(404).send({
                     ok: false,
-                    error: ["Email o contraseña errónea"] 
+                    error: ["Email o contraseña errónea"]
                 })
             }
         })
@@ -213,7 +213,7 @@ aplicacion.delete('/api/v1/publicaciones/:id', function(peticion, respuesta) {
 
     /** parametro que recibe la ruta para tomar el id correspondiente a la publicación a eliminar :id */
     const id = peticion.params.id
-    
+
     /** realizar la conexión  */
     pool.getConnection((err, connection) => {
         /** query que consulta los datos del autor correspondiente a los datos de preticion.query */
@@ -238,7 +238,7 @@ aplicacion.delete('/api/v1/publicaciones/:id', function(peticion, respuesta) {
                         })
                     } else {
                         /** en caso tal de que los datos del parametro sean incorrecto, responder con un false */
-                        respuesta.status(400).json({ 
+                        respuesta.status(400).json({
                             ok: false,
                             errors: "La publicacion no existe o no pertenece al usuario"
                         })
@@ -246,10 +246,10 @@ aplicacion.delete('/api/v1/publicaciones/:id', function(peticion, respuesta) {
                 })
             } else {
                 /** en caso tal de que los datos del query sean incorrectos, tanto email como contraseña responder con un mensaje false */
-                respuesta.status(404).json({ 
+                respuesta.status(404).json({
                     ok: false,
                     errors: "Email o contraseña errónea"
-                })               
+                })
             }
         })
         connection.release()
