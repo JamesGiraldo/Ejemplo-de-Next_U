@@ -1,2 +1,0 @@
-Fecha y hora: 08/01/2021  18:00:14 Moneda: BTC codigo recibido: 1234567890 valor: $100
-Fecha y hora: 08/01/2021  18:00:14 Moneda: BTC codigo transferencia: 1234567899 valor: $-10
