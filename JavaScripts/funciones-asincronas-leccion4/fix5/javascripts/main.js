@@ -31,9 +31,9 @@ function llenarEventos() {
   var aux=5;
 function llenarMas() {
   aux=aux+5;
-  
+
   for (var i = aux-5; i < aux; i++) {
-    
+
     var nombre = document.createElement("h2");
     var contenidoNombre = document.createTextNode(eventos[i].nombre + " (LUEGO DEL Cargarmas)");
     nombre.appendChild(contenidoNombre);
@@ -54,9 +54,9 @@ function llenarMas() {
 
 function scrollMas() {
   aux=aux+5;
-  
+
   for (var i = aux-5; i < aux; i++) {
-    
+
     var nombre = document.createElement("h2");
     var contenidoNombre = document.createTextNode(eventos[i].nombre + " (LUEGO DEL SCROLL)");
     nombre.appendChild(contenidoNombre);
@@ -82,16 +82,12 @@ document.addEventListener("scroll", function (Evento) {
 /* Listener Boton */
 var boton=document.getElementById('btn');
 boton.addEventListener("click", function () {
-  
+
     llenarMas();
-  
+
 })
 
 
 iniciarEventos();
 llenarEventos();
 scrollMas();
-
-
-
-
