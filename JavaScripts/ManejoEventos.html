@@ -38,7 +38,12 @@
       <!-- Código javascript -->
       <script type="text/javascript">
         function pestana1() {
-          document.getElementById("divChange").innerText="Este es el contenido 1"
+          // document.getElementById("divChange").innerText="Este es el contenido 1"
+          var otrodiv = `<div class="contenedor">
+                                  <h1> pagina 1 </h2>
+                         </div>`
+
+         document.getElementById("divChange").innerHTML = otrodiv
         }
 
         function pestana2(){
