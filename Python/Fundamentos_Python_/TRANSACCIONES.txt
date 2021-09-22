@@ -1,0 +1,7 @@
+﻿
+Fecha:Wednesday 13/12/2019 03:44:54PM,Moneda:BTC,Transacci�n:Recibido,C�digo de usuario:1234,Cantidad :20.0,Total de la operaci�n en $:186320.40000000002, Total acumulado en cuenta en $:209610.45
+Fecha:Wednesday 13/12/2019 03:46:56PM,Moneda:BTC,Transacci�n:Enviado,C�digo de usuario:1451,Cantidad :2.0,Total de la operaci�n en $:18622.44, Total acumulado en cuenta en $:190880.00999999998
+Fecha:Wednesday 13/12/2019 03:47:38PM,Moneda:ETH,Transacci�n:Recibido,C�digo de usuario:3323,Cantidad :25.0,Total de la operaci�n en $:4747.5, Total acumulado en cuenta en $:4875.37866
+Fecha:Wednesday 13/12/2019 03:47:59PM,Moneda:LTC,Transacci�n:Enviado,C�digo de usuario:4551,Cantidad :5.0,Total de la operaci�n en $:315.5, Total acumulado en cuenta en $:148.91600000000003
+FECHA:Tuesday 07/09/2021 10:32:19AM,MONEDA :BTC, TRANSACCIÓN :Recibido, CÓDIGO USUARIO :1234,CANTIDAD :100.0,TOTAL DE OPERACIÓN EN $ :4658000.0, TOTAL ACUMULADO EN CUENTA EN $ :4774450.0
+FECHA:Tuesday 07/09/2021 10:33:16AM,MONEDA :BTC, TRANSACCIÓN :Enviado, CÓDIGO USUARIO :1234,CANTIDAD :50.0,TOTAL DE OPERACIÓN EN $ :2328600.5, TOTAL ACUMULADO EN CUENTA EN $ :2445030.525
