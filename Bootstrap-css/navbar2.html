@@ -13,7 +13,7 @@
   <body>
 
     <!-- navbar de la libreria -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand text-primary" href="/">
          <img id='logo' src="./imagenes/logo.png" alt="logo de Oye!" class="mr-2">
          Oye!
@@ -36,6 +36,42 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="index.html">
+                <h1>
+                  <img src="imagenes/logo.png" alt="" width="50">
+                  OYE!
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barra" aria-controls="barra" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="barra">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link menu" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu" href="canciones.html">Canciones</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link menu" onclick="abrir()">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu" href="sesion.html" role="button">Inicio de Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu" href="registro.html" role="button">Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <div class="container-fluid m-auto py-5 row bg-light" id='canciones'>
