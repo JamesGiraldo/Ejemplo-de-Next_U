@@ -1,0 +1,432 @@
+:root {
+    --font-color: white;
+    --bg-color: #0C83C6;
+    --bg-color2: #085073;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+}
+
+@keyframes productosAn {
+    0% {}
+
+    100% {
+        background-repeat: repeat-x;
+        background-image: url(../img/tenis4.jpg);
+        background-size: 33.3% 101%;
+        font-size: 1.5rem;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1,
+h2,
+p {
+    color: var(--font-color);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    z-index: 2;
+}
+
+a {
+    color: var(--bg-color);
+}
+
+h1 {
+    font-size: 'Roboto';
+    font-size: 2.4em;
+    line-height: 3em;
+}
+
+table {
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+}
+
+thead {
+    background-color: var(--bg-color);
+    color: white;
+
+}
+
+tbody {
+    background-color: white;
+    color: var(--bg-color);
+}
+
+tbody tr:hover {
+    background-color: var(--bg-color2);
+    color: white;
+}
+
+.canchaMovil {
+    display: none;
+}
+
+.canchaTenis {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 0 15px white;
+    border-radius: 5px;
+    background-color: var(--bg-color2);
+    margin-bottom: 3em;
+}
+
+.mitad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, calc(90vw/(2.4*6)));
+    width: 50%;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 769px) {
+    .mitad {
+        grid-template-rows: repeat(6, calc(90vw/(1.6*6)));
+    }
+}
+
+.mitad>section {
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@keyframes fondoGeneral {
+    0% {
+        background: var(--bg-color);
+    }
+
+    100% {
+        background: linear-gradient(0deg, var(--bg-color) 0%, var(--bg-color2) 100%);
+    }
+}
+
+#bienvenida:hover,
+#horarios:hover,
+#reservaciones:hover,
+#resultados:hover {
+    animation-name: fondoGeneral;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#mitad1 {
+    border-radius: 10px 0 0 10px;
+}
+
+#mitad2 {
+    border-radius: 0 10px 10px 0;
+}
+
+.lateral {
+    grid-column: 1/4;
+}
+
+#bienvenida {
+    grid-row: 1/1;
+    border-radius: 5px 0 0 0;
+}
+
+#reservaciones {
+    grid-row: 6/7;
+    border-radius: 0 0 0 5px;
+}
+
+#horarios {
+    grid-row: 1/1;
+    border-radius: 0 5px 0 0;
+}
+
+#direccion {
+    grid-row: 6/7;
+    border-radius: 0 0 5px 0;
+    position: relative;
+}
+
+#direccion:hover div {
+    filter: brightness(100%) opacity(0.7);
+}
+
+.fondoFiltro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: filter 1s;
+    z-index: 1;
+}
+
+#direccion div {
+    background-image: url(../img/tenis10.jpg);
+    background-position-y: 20%;
+    filter: brightness(60%) opacity(0.4);
+}
+
+#direccion p {
+    position: relative;
+}
+
+.fondo {
+    grid-row: 2/6;
+}
+
+#clasesGrupales {
+    grid-column: 1/2;
+    background-image: url(../img/tenis3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40%;
+    background-position-y: -10%;
+
+}
+
+#clasesGrupales:hover h2::before {
+    content: "Clases grupales";
+    color: white;
+}
+
+.fondo:hover div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200, 220, 255, 0.4);
+    z-index: 3;
+}
+
+#clasesPrivadas {
+    grid-column: 3/4;
+    background-image: url(../img/tenis6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+}
+
+#clasesPrivadas:hover h2::before {
+    content: "Clases privadas";
+    color: white;
+}
+
+.medio {
+    z-index: 2;
+}
+
+.medio1 {
+    grid-column: 2/4;
+}
+
+.medio2 {
+    grid-column: 1/3;
+}
+
+#productos {
+    grid-row: 2/4;
+    transition: background-color 1s;
+}
+
+#productos>h2 {
+    transition: color 1s;
+}
+
+#productos:hover>h2 {
+    color: black;
+}
+
+#productos:hover {
+    animation-name: productosAn;
+    background-color: white;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes relgasTenisAn {
+    0% {
+        filter: brightness(1) opacity(0.5);
+    }
+
+    100% {
+        filter: brightness(0.2) opacity(0.6);
+    }
+
+}
+
+#reglasTenis {
+    grid-row: 4/6;
+    background-size: cover;
+    position: relative;
+}
+
+#reglasTenis .fondoFiltro {
+    background-image: url(../img/tenis1.jpg);
+    filter: brightness(80%) opacity(0.75);
+    background-position-x: 100%;
+    background-position-y: 60%;
+}
+
+#reglasTenis:hover .fondoFiltro {
+    filter: brightness(40%) opacity(0.8);
+}
+
+#resultados {
+    grid-row: 2/4;
+    padding: 6%;
+    justify-content: space-around;
+}
+
+@keyframes blogAn {
+    0% {}
+
+    80% {
+        background-image: url(../img/tenis8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    100% {
+        background-position: 20%;
+        background-image: url(../img/tenis8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+#blog {
+    grid-row: 4/6;
+    transition: background-color 1s;
+}
+
+#blog:hover {
+    background-color: white;
+    animation-name: blogAn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+span img {
+    width: 20px;
+}
+
+@media (max-width: 768px) {
+    .canchaTenis {
+        display: none;
+    }
+
+    .canchaMovil {
+        display: block;
+        flex-direction: column;
+    }
+
+    h1:hover {
+        color: var(--bg-color2);
+        text-shadow: 0 0 20px white;
+    }
+
+    .mitadMl {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: repeat(2, calc((90vw*2.4)/6));
+    }
+
+    .medioMovil:hover {
+        background-color: var(--bg-color);
+    }
+
+    .mitadMl>div {
+        background-color: var(--bg-color2);
+        border: 3px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mitadMl p {
+        margin-bottom: 1em;
+        margin-top: 1em;
+        font-size: 1.2rem;
+    }
+
+    #bienvenidaMl,
+    #reservasMl {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+
+    #horariosMl,
+    #direccionMl {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    #lat1 {
+        background-image: url(../img/tenis1.jpg);
+        background-position-x: 60%;
+        border-radius: 10px 0 0 0;
+    }
+
+    #lat2 {
+        background-image: url(../img/tenis2.jpg);
+        background-position-x: 60%;
+        border-radius: 0 10px 0 0;
+    }
+
+    #lat3 {
+        background-image: url(../img/tenis3.jpg);
+        background-position-x: 50%;
+        border-radius: 0 0 0 10px;
+    }
+
+    #lat4 {
+        background-image: url(../img/tenis7.jpg);
+        background-position-x: 30%;
+        border-radius: 0 0 10px 0;
+    }
+
+    .lateral {
+        display: block;
+        grid-row: 1/3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: filter 0.5s;
+    }
+
+    .lateral:hover {
+        filter: brightness(125%);
+    }
+
+    #lat1,
+    #lat3 {
+        grid-column: 1/2;
+    }
+
+    #lat2,
+    #lat4 {
+        grid-column: 4/5;
+    }
+
+}
