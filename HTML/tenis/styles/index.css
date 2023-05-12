@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mobile{display: none;}
+
+body {
+    background: #3a7700;
+    padding: 2% 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#desktop{margin-top: 4vh;}
+
+a{text-decoration: none;}
+h2{font-size: 1.3em;}
+h3{font-size: 0.8em;}
+.text-center{text-align: center;}
+
+.w-40{width: 40%;}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.absolute{position: absolute;}
+.relative{position: relative;}
+.font-white{color: white;}
+
+.center-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-squares{background: #17642e;}
+.pd-box{padding: 2% 8%;}
+table{border-collapse: collapse;}
+
+table, td, th{
+    border: 2px solid #ffffff;
+    padding: 0.2em 0.9em;
+}
+
+th{
+    letter-spacing: 1px;
+    background-color: #2e7ddd;
+}
+
+tr{
+    background-color: #fff;
+    color: #2e7ddd;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.title {
+    font-family: Righteous;
+    letter-spacing: 2px;
+    transition: all ease-in-out 0.3s;
+}
+
+.radius-tl{border-top-left-radius: 13px;}
+.radius-tr{border-top-right-radius: 13px;}
+.radius-br{border-bottom-right-radius: 13px;}
+.radius-bl{border-bottom-left-radius: 13px;}
+
+.boxLeft,
+.boxRight{
+    border: 5px solid #ffffff;
+    width: 49.8%;
+    box-shadow: 0 0 13px #ffffff;
+}
+
+.box-title-sections,
+.box-footer-sections{
+    width: 100%;
+    height: 14vh;
+    background-size: cover;
+}
+
+.img-shoes{
+    width: 20px;
+    height: 20px;
+    transform: scaleX(-1);
+}
+
+.boxSectionCenter{
+    height: 50vh;
+    border-top: 5px solid #ffffff;
+    border-bottom: 5px solid #ffffff;
+    box-sizing: content-box;
+}
+
+.box-private-class,
+.boxRightSection2-img{
+    width: 25%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.box-private-class{border-right: 5px solid #ffffff;}
+.boxRightSection2-img{border-left: 5px solid #ffffff;}
+.box-private-class,
+.boxRightSection1,
+.boxLeftSection2 {
+    height: 50vh;
+}
+
+.boxRightSection1, 
+.boxLeftSection2{width: 75%;}
+
+.sec1_cen_bottom,
+.sec2_cen_bottom {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    background-size: cover;
+    border-top: 5px solid #ffffff;
+}
+
+.cen-sec1-img,
+.cen-sec2-img{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all ease-in-out 0.6s;
+}
+
+.cen-sec1-img{filter: brightness(70%);}
+
+.cen-sec2-text{
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+    font-size: 1.3em;
+    justify-content: space-around;
+}
+
+.sec2_cen_bottom a{
+    bottom: 15%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    color: #28f855;
+}
+
+.cen-sec1-text{
+    z-index: 2;
+    font-size: 1em;
+}
+
+.sec1_cen_top,
+.sec2_cen_top{
+    width: 100%;
+    height: 50%;
+    transition: all ease-in 0.6s;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+.sec1_cen_top h2{
+    transition: all ease-in 0.3s;
+    transition-delay: 0.4s;
+}
+
+.sec1-cen-top-img{
+    background: url("https://rare-gallery.com/uploads/posts/376095-4k-wallpaper.jpg") center no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+
+.box-direction-img{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all ease-in-out 0.4s;
+    background: url("https://wallpapercave.com/wp/wp3088653.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.footerSection-r-txt{z-index: 2;}
+
+/*----------------------------------------------------
+-------------------------EFECTOS----------------------
+-----------------------------------------------------*/
+
+.sec1_cen_top:hover h2{
+    transform: scale(2);
+    color: #000;
+    text-shadow: 0 0 6px #fff;
+}
+
+.sec1_cen_top:hover{
+    animation-name: products-efect;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    width: 100%;
+}
+
+.sec1_cen_top:hover .sec1-cen-top-img{z-index: 100;}
+
+tr:hover{
+    background-color: #0e305a;
+    color: #ffffff;
+}
+
+.boxRightSection2-img:hover::after{content: "Clases privadas";}
+.box-private-class:hover::after{content: "Clases grupales";}
+
+.box-private-class:hover::after,
+.boxRightSection2-img:hover::after{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 6%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.205);
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+.sec2_cen_bottom:hover .cen-sec2-img {
+    background: url("https://images5.alphacoders.com/436/436417.jpg") no-repeat;
+    background-size: cover;
+    filter: brightness(20%);
+}
+
+.sec2_cen_top:hover,
+.boxRight .box-title-sections:hover,
+.boxLeft .box-footer-sections:hover{
+    background: linear-gradient(#17642e 40%, #239c48 100%);
+}
+
+.boxLeft .box-footer-sections:hover{border-bottom-left-radius: 8px;}
+.sec1_cen_bottom:hover .cen-sec1-img{filter: brightness(20%);}
+.boxRight .box-footer-sections:hover .box-direction-img{filter: opacity(50%);}
+
+@keyframes products-efect {
+    0%{
+        background: rgb(255, 255, 255, 0.4);
+    }
+    15%{
+        background: rgb(255, 255, 255, 0.7);
+    }
+    35%{
+        background: #fff;
+    }
+    100%{
+        background: url("https://thumbs.dreamstime.com/b/dos-pelotas-de-tenis-aisladas-en-blanco-105264666.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}
+
+/*----------------------------------------------------
+-------------------RESPONSIVE 930px-------------------
+-----------------------------------------------------*/
+
+@media screen and (max-width: 930px){
+    .box-private-class:hover::after,
+    .boxRightSection2-img:hover::after{
+        font-size: 1.2em;
+    }
+
+    tr{font-size: 0.8rem;}
+    h2{font-size: 1.1em;}
+    h3{font-size: 0.6em;}
+}
+
+/*----------------------------------------------------
+-------------------RESPONSIVE 768px-------------------
+-----------------------------------------------------*/
+
+@media screen and (max-width: 767px){
+
+    #desktop{display: none;}
+
+    #mobile{
+        display: grid;
+        height: 100vh;
+        margin-bottom: 4%;
+        margin-top: 2%;
+        border: 4px solid #fff;
+        border-radius: 10px;
+    }
+
+    h2{font-size: 1.3em;}
+    h3{font-size: 0.8em;}
+
+    .grid-center{
+        display: grid;
+        align-content: center;
+    }
+
+    .grid-1{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .grid-3{
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+    }
+
+    .radius-tl{border-top-left-radius: 6px;}
+    .radius-tr{border-top-right-radius: 6px;}
+    .radius-br{border-bottom-right-radius: 6px;}
+    .radius-bl{border-bottom-left-radius: 6px;}
+    
+    .box-top{
+        margin-bottom: 1%;
+        border-bottom: 4px solid #fff;
+        box-shadow: 0 2px 4px #fff;
+    }
+
+    .box-private-class,
+    .boxRightSection2-img{
+        width: 100%;
+        height: 100%;
+        border: none;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .box-bottom{
+        margin-top: 1%;
+        border-top: 4px solid #fff;
+        box-shadow: 0 -2px 4px #fff;
+    }
+
+    #mobile div[class$="box"]{
+        padding: 8%;
+        border: 2px solid #fff;
+    }
+
+    #mobile div[class*="welcome"],
+    #mobile div[class*="class"]{border-top: none;}
+    #mobile div[class*="schedule"],
+    #mobile div[class*="direction"]{border-bottom: none;}
+    #mobile div[class*="img"]{filter: brightness(100%);}
+
+    /*-------------EFECTOS---------------*/
+    .middle-column div:hover{background: #3a7700;}
+    #mobile div[class*="img"]:hover{filter: brightness(200%);}
+
+    .box-private-class:hover::after,
+    .boxRightSection2-img:hover::after{
+        content: "";
+        background-color: none;
+        background: none;
+    }
+
+    .shadow-title:hover{
+        text-shadow: 0 0 20px #fff, 2px 3px 4px #252525;
+        color: #004916;
+    }
+}

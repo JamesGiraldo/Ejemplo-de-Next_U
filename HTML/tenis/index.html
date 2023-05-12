@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+    <title>Club de tenis</title>
+</head>
+
+<body>
+    <header>
+        <div class="center-item">
+            <h1 class="title font-white shadow-title">Club de Tenis</h1>
+        </div>
+    </header>
+    <!------------------------------------------------
+        ----------------DESKTOP CONTAINER-----------------
+        ------------------------------------------------->
+
+    <section id="desktop" class="flex-between flex-row">
+        <!-- CAJA IZQUIERDA-->
+        <div class="boxLeft color-squares radius-tl radius-bl">
+            <!-- Titulo Sección 1 -->
+            <div class="box-title-sections center-item relative pd-box">
+                <h2 class="font-white text-center">
+                    Bienvenido a la página web de tu Club de Tenis
+                </h2>
+            </div>
+
+            <!-- Sección central -->
+            <div class="boxSectionCenter flex-row">
+                <div class="box-private-class relative">
+                    <img src="img/private_classes.jpeg" class="absolute" alt="Clases privadas" />
+                </div>
+
+                <div class="boxRightSection1 flex-column">
+                    <div class="sec1_cen_top center-item relative pd-box">
+                        <div class="sec1-cen-top-img absolute"></div>
+                        <h2 class="font-white">Productos</h2>
+                    </div>
+
+                    <div class="sec1_cen_bottom center-item relative pd-box">
+                        <div class="cen-sec1-img absolute">
+                            <img src="img/tennis-ball-and-racket.jpg" alt="Reglas del tenis" />
+                        </div>
+
+                        <div class="cen-sec1-text center-item absolute">
+                            <h2 class="font-white text-center">
+                                Aprende sobre las reglas del Tenis
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie 1ra Sección-->
+            <div class="box-footer-sections center-item pd-box">
+                <div class="flex-row flex-between w-40">
+                    <div class="center-item">
+                        <img src="img/zapato.png" alt="Shoes" class="img-shoes" />
+                    </div>
+                    <div class="center-item">
+                        <h2 class="font-white text-center">Reservar clase</h2>
+                    </div>
+                    <div class="center-item">
+                        <img src="img/zapato.png" alt="Shoes" class="img-shoes" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAJA DERECHA -->
+        <div class="boxRight color-squares radius-tr radius-br">
+            <!-- Titulo Sección 2 -->
+            <div class="box-title-sections flex-column center-item radius-tr font-white">
+                <h2>Horarios:</h2>
+                <h3>Lunes a viernes 9:00am a 8:00pm</h3>
+                <h3>Sábados y domingos 9:00am - 10:00pm</h3>
+            </div>
+
+            <!-- Sección central -->
+            <div class="boxSectionCenter flex-row">
+                <div class="boxLeftSection2 flex-column">
+                    <div class="sec2_cen_top center-item flex-column relative pd-box">
+                        <div>
+                            <h2 class="font-white text-center">
+                                Resultado del último juego
+                            </h2>
+                        </div>
+
+                        <div class="center-item">
+                            <table class="text-center">
+                                <thead>
+                                    <th class="font-white">Nombre</th>
+                                    <th class="font-white">Set 1</th>
+                                    <th class="font-white">Set 2</th>
+                                    <th class="font-white">Set 3</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Jokovic</td>
+                                        <td>2</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nadal</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="sec2_cen_bottom relative">
+                        <div class="absolute flex-column cen-sec2-text pd-box">
+                            <p class="font-white">
+                                Entrada de blog: ¿Cómo calentar antes de un entrenamiento de
+                                tenis?..
+                            </p>
+                            <a href="#">Leer más</a>
+                        </div>
+
+                        <div class="cen-sec2-img relative center-item"></div>
+                    </div>
+                </div>
+
+                <div class="box- boxRightSection2-img relative">
+                    <img src="img/play_tenis.jpg" class="absolute" alt="Play tenis" />
+                </div>
+            </div>
+
+            <!-- Pie 2da sección-->
+            <div class="box-footer-sections center-item relative radius-br pd-box">
+                <div class="box-direction-img radius-br absolute"></div>
+                <div class="footerSection-r-txt absolute pd-box">
+                    <h2 class="font-white text-center">
+                        Estamos ubicados en la calle Monserrat, 08970. Barcelona
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------------------------------------
+        ----------------MOBILE CONTAINER------------------
+        ------------------------------------------------->
+
+    <section class="mobile grid-1" id="mobile">
+        <!-- CAJA SUPERIOR -->
+        <div class="box-top grid-3">
+            <div class="box-direction-img radius-tl"></div>
+
+            <div class="grid-1 color-squares middle-column">
+                <div class="grid-center welcome-box">
+                    <h2 class="text-center">Bienvenido a tu Club de Tenis</h2>
+                </div>
+
+                <div class="grid-center schedule-box">
+                    <h3 class="text-center">Horario: L-V: 9am-8pm, S-S: 9am-10pm</h3>
+                </div>
+            </div>
+
+            <div class="boxLeftSection1-img radius-tr">
+                <img src="img/private_classes.jpeg" class="absolute" alt="" />
+            </div>
+        </div>
+
+        <!-- CAJA INFERIOR -->
+        <div class="box-bottom grid-3">
+            <div class="boxRightSection2-img radius-bl">
+                <img src="img/play_tenis.jpg" class="absolute" alt="Play tenis" />
+            </div>
+
+            <div class="grid-1 middle-column color-squares">
+                <div class="grid-center class-box">
+                    <h3 class="text-center">
+                        Agenda aquí tus clases grupales y privadas
+                    </h3>
+                </div>
+
+                <div class="grid-center direction-box">
+                    <h3 class="text-center">
+                        Estamos ubicados en la calle Moserrat, 08970. Barcelona
+                    </h3>
+                </div>
+            </div>
+
+            <div class="radius-br cen-sec1-img">
+                <img src="img/tennis-ball-and-racket.jpg" alt="Reglas del tenis" />
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
